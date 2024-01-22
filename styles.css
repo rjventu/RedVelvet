@@ -37,7 +37,7 @@
     /* COLORS */
     --col1: #FFFFFF;
     --col2: #D0051B;
-    --txt-col: #453939;
+    --txt-col: #000000;
     --link-col: #A6A6A6;
 
     /* TYPOGRAPHY */
@@ -410,10 +410,14 @@ section h6 {
 }
 
 /* [4H] CART/CHECKOUT */
-.order{
-    z-index: 1;
+.order {
     background-color: var(--col2);
     min-height: 60rem;
+}
+
+.checkout-wrapper {
+    background-color: var(--col2);
+    min-height: 65rem;
 }
 
 .order-receipt {
@@ -442,6 +446,20 @@ section h6 {
 .rc-table-title {
     color: var(--link-col);
     font-size: 14px;
+}
+
+.check-form-wrapper p{
+    font-size: 13px;
+    margin-top: 2rem;
+    text-align: right;
+    padding-left: 30%;
+}
+
+.rc-forms {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .rc-table-title td:nth-child(1) {
@@ -475,7 +493,7 @@ section h6 {
     font-size: 20px;
     text-align: right;
     font-weight: var(--fweight-heading);
-    font-style: italic;
+    font-style: normal !important;
 }
 
 .rc-links {
@@ -717,15 +735,16 @@ footer {
     border-bottom: 2px solid black;
 }
 
-.inq-form label {
+label {
     font-weight: var(--fweight-heading);
     color: var(--col2);
 }
 
-.inq-form input {
+input, #date, #payment {
     border: none;
     border-bottom: 2px solid black;
     margin-left: 0.5rem;
+    background-color: var(--col1);
 }
 
 .inq-form .btn {
@@ -734,15 +753,55 @@ footer {
 }
 
 /* [8] MENU MODALS */
-#modal-content {
+#menu-modal {
     background-color: var(--col1);
     display: flex;
-    flex-direction: row;
-    
+    min-width: 100px;
 }
 
-#modal-content img {
-    width: 50px;
+#menu-modal img {
+    width: 60%;
+    height: 600px;
+    object-fit: cover;
+    align-self: center;
+}
+
+.itm-modal-right {
+    width: 40%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.itm-desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.itm-desc p {
+    margin-top: 2rem;
+}
+
+.itm-desc h4 {
+    color: var(--txt-col);
+}
+
+.itm-desc h2 {
+    font-size: 40px;
+    font-weight: var(--fweight-heading);
+}
+
+.price-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-cart h3 {
+    margin: 0;
+    font-style: normal;
+    font-weight: var(--fweight-heading);
 }
 
 /* mobile */
@@ -914,7 +973,3 @@ footer {
         padding-top: 1rem;
     }
 }
-
-
-
-
