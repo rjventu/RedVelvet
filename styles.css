@@ -32,6 +32,8 @@
 
     [8] MENU MODALS
 
+    [9] LOGIN
+
 /* [1] GLOBAL */
 :root {
     /* COLORS */
@@ -67,6 +69,11 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--col1);
+}
+
+input:focus {
+    outline: none;
+    border-bottom: var(--col2) solid 2px;
 }
 
 /* [2] BUTTONS */
@@ -410,16 +417,6 @@ section h6 {
 }
 
 /* [4H] CART/CHECKOUT */
-.order {
-    background-color: var(--col2);
-    min-height: 60rem;
-}
-
-.checkout-wrapper {
-    background-color: var(--col2);
-    min-height: 65rem;
-}
-
 .order-receipt {
     background-color: var(--col1);
     margin-block: 5rem;
@@ -668,15 +665,25 @@ footer {
     border: none;
     background-color: var(--col2);
     color: var(--col1);
-    position: sticky;
     bottom: 0;
     width: 100%;
     z-index: -999;
+    
+}
+
+footer a {
+    color: var(--col1);
+}
+
+footer a:hover {
+    color: var(--col1);
+    text-decoration: underline;
 }
 
 .footer-table th {
     font-size: 20px;
 }
+
 
 .footer p,td {
     font-size: 14px;
@@ -802,6 +809,49 @@ input, #date, #payment {
     margin: 0;
     font-style: normal;
     font-weight: var(--fweight-heading);
+}
+
+/* [9] LOGIN */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    background-color: var(--col1);
+    margin-block: 5rem;
+    margin-inline: 33%;
+    padding: 4rem;
+}
+
+.login-form h2 {
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.login-details {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.login-details div {
+    text-align: left;
+}
+
+.login-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    padding-top: 4em;
+}
+
+.login-links a {
+    color: var(--link-col);
+    padding-left: 0.5rem;
 }
 
 /* mobile */
