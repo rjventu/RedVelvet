@@ -34,6 +34,8 @@
 
     [9] LOGIN
 
+    [10] ADMIN PANEL
+
 /* [1] GLOBAL */
 :root {
     /* COLORS */
@@ -814,16 +816,17 @@ input, #date, #payment {
 .login-wrapper {
     display: flex;
     justify-content: center;
+    height: 100vh;
 }
 
 .login-form {
-    background-color: var(--col1);
-    margin-block: 5rem;
+    background-color: white;
+    /* margin-block: 5rem;
     margin-inline: 33%;
-    padding: 4rem;
+    padding: 4rem; */
 }
 
-.login-form h2 {
+/*.login-form h2 {
     font-size: 35px;
     text-align: center;
     padding-bottom: 2rem;
@@ -851,6 +854,32 @@ input, #date, #payment {
 .login-links a {
     color: var(--link-col);
     padding-left: 0.5rem;
+} */
+
+.signup-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-form {
+    background-color: var(--col1);
+    margin-block: 5rem;
+    margin-inline: 33%;
+    padding: 4rem;
+}
+
+/* [10] ADMIN PANEL */
+
+.admin-panel-wrapper {
+    /* background-color: white; */
+    border-color: aqua;
+    border-width: 5px;
+    border-style: solid;
+    height : 100vh;
+}
+
+.admin-panel-wrapper h2{
+    color: white;
 }
 
 /* mobile */
