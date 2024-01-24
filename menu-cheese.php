@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
-    <title>Red Velvet KH - Cookies</title>
+    <title>Red Velvet KH - Cheesecakes</title>
 </head>
   
 <body>
@@ -41,10 +41,10 @@
               <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="menu-sigcakes.html">SIGNATURE CAKES</a>
                 <a class="dropdown-item" href="menu-cakedel.html">CAKE DELIGHTS</a>
-                <a class="dropdown-item" href="menu-cheese.html">CHEESECAKES</a>
+                <a class="dropdown-item" id="active" href="menu-cheese.html">CHEESECAKES</a>
                 <a class="dropdown-item" href="menu-pastries.html">PASTRIES</a>
                 <a class="dropdown-item" href="menu-cupcakes.html">CUPCAKES</a>
-                <a class="dropdown-item" id="active" href="menu-cookies.html">COOKIES</a>
+                <a class="dropdown-item" href="menu-cookies.html">COOKIES</a>
                 <a class="dropdown-item" href="menu-bars.html">BARS</a>
               </div>
             </li>
@@ -60,176 +60,123 @@
 </header>
 <section class="menu-banner">
     <div>
-        <h1>Cookies</h1>
+        <h1>Cheese</h1><span>cakes</span>
     </div>
-    <p>8 large pcs per order</p>
+    <p>6" | good for 6-10 people <br>
+        8" | good for 8-12 people</p>
 </section>
 <section class="menu-lay">
     <div class="menu-card">
         <div class="image-container">
-            <a data-toggle="modal" data-target="#cookiesdoublechocoModalCenter">
-                <img class="card-img" src="assets/food/cookies-doublechoco.jpg">
+            <a data-toggle="modal" data-target="#cheeseblueModalCenter">
+                <img class="card-img" src="assets/food/cheese-blueberry.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h4>Bestseller!</h4>
-                        <h2>Double Choco</h2>
-                        <h3>$6</h3>
+                        <h2>Blueberry Cheesecake</h2>
+                        <h3>$15 | $25</h3>
                     </div>
                 </div>
             </a>
         </div>
         <div class="card-desc">
             <h4>Bestseller!</h4>
-            <h2>Double Choco</h2>
-            <h3>$6</h3>
+            <h2>Blueberry Cheesecake</h2>
+            <h3>$15 | $25</h3>
         </div>
     </div>
     <div class="menu-card">
         <div class="image-container">
-            <a data-toggle="modal" data-target="#cookiesclassicModalCenter">
-                <img class="card-img" src="assets/food/cookies-classicchocochip.jpg">
+            <a data-toggle="modal" data-target="#cheeseoreoModalCenter">
+                <img class="card-img" src="assets/food/cheese-oreo.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h4>Bestseller!</h4>
-                        <h2>Classic Choco Chip</h2>
-                        <h3>$6</h3>
+                        <h2>Oreo Cheesecake</h2>
+                        <h3>$15 | $25</h3>
                     </div>
                 </div>
             </a>
         </div>
         <div class="card-desc">
             <h4>Bestseller!</h4>
-            <h2>Classic Choco Chip</h2>
-            <h3>$6</h3>
+            <h2>Oreo Cheesecake</h2>
+            <h3>$15 | $25</h3>
         </div>
     </div>
     <div class="menu-card">
         <div class="image-container">
-            <a data-toggle="modal" data-target="#cookiesfilledModalCenter">
-                <img class="card-img" src="assets/food/cookies-filled.jpg">
+            <a data-toggle="modal" data-target="#cheesestrawModalCenter">
+                <img class="card-img" src="assets/food/cheese-straw.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
-                        <h2>Cream Cheese-Filled</h2>
-                        <h3>$6</h3>
+                        <h2>Strawberry Cheesecake</h2>
+                        <h3>$15 | $25</h3>
                     </div>
                 </div>
             </a>
         </div>
         <div class="card-desc">
-            <h2>Cream Cheese-Filled</h2>
-            <h3>$6</h3>
+            <h2>Strawberry Cheesecake</h2>
+            <h3>$15 | $25</h3>
         </div>
     </div>
     <div class="menu-card">
         <div class="image-container">
-            <a data-toggle="modal" data-target="#cookiesredvelModalCenter">
-                <img class="card-img" src="assets/food/cookies-redvel.jpg">
+            <a data-toggle="modal" data-target="#cheesenycModalCenter">
+                <img class="card-img" src="assets/food/cheese-nyc.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
-                        <h2>Red Velvet Choco Chip</h2>
-                        <h3>$6</h3>
+                        <h2>Classic New York</h2>
+                        <h3>$14 | $22</h3>
                     </div>
                 </div>
             </a>
         </div>
         <div class="card-desc">
-            <h2>Red Velvet Choco Chip</h2>
-            <h3>$6</h3>
+            <h2>Classic New York</h2>
+            <h3>$14 | $22</h3>
         </div>
     </div>
 </section>
 
 </body>
 
-<footer>
-    <div class="footer-table">
-        <table>
-            <tr>
-                <th>Address</th>
-                <th>Operating Hours</th>
-                <th>Follow Us</th>
-            </tr>
-            <tr>
-                <td>#145 Ta Phon,</td>
-                <td>All week</td>
-                <td>
-                    <img src="assets/social icons.png" usemap="#social-map" width="50px">
-                </td>
-            </tr>
-            <tr>
-                <td>12 BT St. 12351</td>
-                <td>8 AM - 7 PM</td>
-                <td><a href="login.html">Admin Login</a></td>
-            </tr>
-        </table>
-    </div>
-    <p>Copyright © 2023 Red Velvet KH 2015</p>
-</footer>
+<!-- Footer -->
+<?php include('footer.php') ?>
 
-<div>
-    <a data-toggle="modal" data-target="#inquirychat" class="inquiry-btn">
-      <img src="assets/speech-bubble.png">
-    </a>
-</div>
+<!-- Inquiry Button -->
+<?php include('inquiry.php') ?>
 
-<!--modal-->
-<div class="modal fade" id="cookiesdoublechocoModalCenter" tabindex="-1" role="dialog" aria-labelledby="cookiesdoublechocoModalCenterTitle" aria-hidden="true">
+<!-- Menu Modal -->
+<div class="modal fade" id="cheeseblueModalCenter" tabindex="-1" role="dialog" aria-labelledby="cheeseblueModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <img src="assets/food/cookies-doublechoco.jpg">
+            <img src="assets/food/cheese-blueberry.jpg">
         </div>
     </div>
 </div>
-<div class="modal fade" id="cookiesclassicModalCenter" tabindex="-1" role="dialog" aria-labelledby="cookiesclassicModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="cheeseoreoModalCenter" tabindex="-1" role="dialog" aria-labelledby="cheeseoreoModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <img src="assets/food/cookies-classicchocochip.jpg">
+            <img src="assets/food/cheese-oreo.jpg">
         </div>
     </div>
 </div>
-<div class="modal fade" id="cookiesfilledModalCenter" tabindex="-1" role="dialog" aria-labelledby="cookiesfilledModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="cheesestrawModalCenter" tabindex="-1" role="dialog" aria-labelledby="cheesestrawModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <img src="assets/food/cookies-filled.jpg">
+            <img src="assets/food/cheese-straw.jpg">
         </div>
     </div>
 </div>
-<div class="modal fade" id="cookiesfilledModalCenter" tabindex="-1" role="dialog" aria-labelledby="cookiesfilledModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="cheesenycModalCenter" tabindex="-1" role="dialog" aria-labelledby="cheesenycModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <img src="assets/food/cookies-redvel.jpg">
+            <img src="assets/food/cheese-nyc.jpg">
         </div>
     </div>
 </div>
-<div class="modal fade" id="inquirychat" tabindex="-1" role="dialog" aria-labelledby="bannertopModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="inquiry-modal">
-              <h2> Have a question?</h2>
-              <form class="inq-form">
-                <div>
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="name" placeholder="Enter your name">
-                </div>
-                <br>
-                <div>
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" placeholder="Enter your email">
-                </div>
-                <br>
-                <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message"></textarea>
-                <input type="submit" value="Submit" class="btn">
-              </form>
-            </div>
-        </div>
-    </div>
-  </div>
-
-<map name="social-map">
-    <area shape="rect" coords="0,12,21,36" href="https://web.facebook.com/RedVelvetKH">
-    <area shape="rect" coords="29,13,50,37" href="https://instagram.com/redvelvetkh?igshid=ZmZhODViOGI=">
-</map>
-
 
 </html>
 
