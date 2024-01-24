@@ -48,8 +48,8 @@
             </tr>
         </table>
         <div class="rc-links">
-          <a href="menu.html">Go back</a>
-          <a class="btn" href="checkout.html">Checkout</a>
+          <a href="menu.php">Go back</a>
+          <a class="btn" href="checkout.php">Checkout</a>
         </div>
     </div>
   </section>

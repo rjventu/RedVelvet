@@ -85,7 +85,7 @@
           </p>
       </div>           
       <div class="rc-links">
-        <a href="order.html">Go back</a>
+        <a href="order.php">Go back</a>
         <input class="btn" type="submit" value="CONFIRM ORDER">
       </div>
   </div>
