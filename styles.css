@@ -875,7 +875,6 @@ input, #date, #payment {
     border-color: aqua;
     border-width: 5px;
     border-style: solid;
-    height : 100vh;
 }
 
 .admin-panel-wrapper h2{

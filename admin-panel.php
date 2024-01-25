@@ -17,10 +17,7 @@ session_start();
 
 
 <section class="admin-panel-wrapper container">
-  <div class="row my-5 d-flex justify-content-center align-items-center">
-    <h2>Admin Panel</h2>
-  </div>
-  <div class="row mb-5">
+  <div class="row my-5">
     <div class="col sidebar" style="background-color:green">text</div>
     <div class="col-md-9 content" style="background-color:blue">text</div>
   </div>
