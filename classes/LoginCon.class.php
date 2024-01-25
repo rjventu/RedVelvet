@@ -27,7 +27,4 @@ class LoginController extends Login{
       return true;
     }
   }
-
 }
-
-?>

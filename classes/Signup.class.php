@@ -36,7 +36,3 @@ class Signup extends Database{
     $stmt = null;
   }
 }
-
-
-
-?>

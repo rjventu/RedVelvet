@@ -52,7 +52,7 @@ class SignupController extends Signup{
   }
 
   private function invalidName(){
-    if(preg_match("/^[a-zA-Z]/",$this->fname) || preg_match("/^[a-zA-Z]/",$this->lname)){ // not working!!! debug
+    if(preg_match("/^[a-zA-Z]$/",$this->fname) || preg_match("/^[a-zA-Z]$/",$this->lname)){
       return true;
     }else{
       return false;
@@ -84,5 +84,3 @@ class SignupController extends Signup{
   }
 
 }
-
-?>
