@@ -57,7 +57,6 @@
     margin: 0;
     padding: 0;
     font-family: var(--font-main);
-    borde: greenyellow 1px solid;
 }
 
 body {
@@ -886,15 +885,54 @@ input, #date, #payment {
 
 /* [10] ADMIN PANEL */
 
-.admin-panel-wrapper {
-    /* background-color: white; */
-    border-color: aqua;
-    border-width: 5px;
-    border-style: solid;
-}
-
 .admin-panel-wrapper h2{
     color: white;
+}
+
+.product-listing-table{
+    background-color: white;
+    border-radius: 20px;
+}
+
+#product-listing-add {
+    border-radius: 0;
+    font-size: medium;
+}
+
+.product-add-container{
+    background-color: white;
+    margin: 4rem 0;
+}
+
+.product-add-container input{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.product-add-container select,
+.product-listing-filter select{
+    outline: none !important;
+    border-radius: 0;
+    border: 1px solid white;
+    border-bottom: 2px solid black;
+    padding: 0.5rem;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.product-add-container option{
+    font-family: var(--font-main);
+}
+
+.product-add-container .form-label{
+    margin-bottom: 0.5rem;
+}
+
+.product-add-container .upload-image{
+    padding: 0.5rem;
+    border: 1px solid #A6A6A6;
+    width: 100%;
 }
 
 /* mobile */

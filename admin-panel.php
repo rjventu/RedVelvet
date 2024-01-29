@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("includes/product.inc.php");
 ?>
 
 <!doctype html>
@@ -7,7 +8,7 @@ session_start();
 
 <!-- Head -->
 <?php include("head-tags.php")?>
-  <title>Red Velvet KH - Admin Login</title>
+  <title>Red Velvet KH - Admin Panel</title>
 </head>
   
 <body>
@@ -26,14 +27,30 @@ session_start();
         </div>
       </div>
       <div class="row mb-4 product-listing-filter">
-        <div class="col product-listing-cat d-flex align-items-center">
-          <h4>Select Category:</h4>
+        <div class="col product-listing-cat">
+          <form method="POST" action="includes/product.inc.php">
+            <div class="input-group align-items-center">
+              <select class="custom-select" name="cat_name" id="cat_name" required>
+                  <option value="" selected>Choose a category</option>
+                  <option value="Signature Cakes">Signature Cakes</option>
+                  <option value="Cake Delights">Cake Delights</option>
+                  <option value="Cheesecakes">Cheesecakes</option>
+                  <option value="Pastries">Pastries</option>
+                  <option value="Cupcakes">Cupcakes</option>
+                  <option value="Cookies">Cookies</option>
+                  <option value="Bars">Bars</option>
+              </select>
+              <div class="input-group-prepend">
+                <input type="submit" name="submit" value="Filter" class="input-group-text btn-submit px-3 py-1" style="width:auto">
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="col product-listing-cat d-flex justify-content-end">
-          <div class="btn-submit" href="admin-product-add.php" role="button">Add New Product</div>
+        <div class="col d-flex justify-content-end">
+          <a class="btn-submit" href="admin-product-add.php" id="product-listing-add">Add New Product</a>
         </div>
       </div>
-      <div class="row product-listing-table">
+      <div class="row product-listing-table mx-1">
         <div class="col">
           <table class="table">
             <thead>
@@ -42,34 +59,26 @@ session_start();
                 <th scope="col">Category</th>
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
-                <th scope="col">Creator</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
               <?php
-                include("includes/product.inc.php");
-                
-                while($row = $result->fetchAll(PDO::FETCH_ASSOC)){
+                while($row = $result->fetch(PDO::FETCH_ASSOC)){
                   echo"
-                    <tr>
-                      <td>$row[prod_id]</td>
-                      <td>$row[cat_id]</td>
-                      <td>$row[prod_name]</td>
-                      <td>$row[prod_price]</td>
-                      <td>$row[admin_id]</td>
-                      <td>
-                        <a class='btn-submit' href='admin-product-edit.php?id=$row[prod_id]'>Edit</a>
-                        <a class='btn-submit' href='admin-product-delete.php?=$row[prod_id]'>Delete</a>
-                      </td>
-                    </tr>
+                  <tr>
+                    <td>$row[prod_id]</td>
+                    <td>".$product->getCatName($row['cat_id'])."</td>
+                    <td>$row[prod_name]</td>
+                    <td>$$row[prod_price]</td>
+                    <td>
+                      <a class='btn-submit' href='admin-product-edit.php?id=$row[prod_id]'>Edit</a>
+                      <a class='btn-submit' href='admin-product-delete.php?id=$row[prod_id]'>Delete</a>
+                    </td>
+                  </tr>
                   ";
-
-                  
-
                 }
               ?>
-              
             </tbody>
           </table>
         </div>
