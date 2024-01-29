@@ -109,6 +109,7 @@ input:focus {
     background-color: var(--col2);
     color: var(--col1);
     border: var(--col1) 1px solid;
+    text-decoration: none;
 }
 
 #problem-btn {
@@ -117,6 +118,21 @@ input:focus {
 
 a {
     cursor: pointer;
+}
+
+.admin-navbar a{ /*not working, debug*/
+    cursor: none;
+}
+
+.product-listing-table .btn-submit{
+    font-size: 12px;
+    padding: 5px 8px;
+    margin: 0 5px 5px;
+}
+
+.product-listing-filter .btn-submit{
+    font-size: 20px;
+    padding: 8px 15px;
 }
 
 /* [3] HEADINGS */
