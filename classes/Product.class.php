@@ -1,7 +1,7 @@
 <?php
 
 class Product extends Database{
-  protected function readProduct(){
+  protected function readProductTable(){
     $query = 'SELECT * FROM product';
     $stmt = $this->connect()->prepare($query);
 
@@ -13,7 +13,7 @@ class Product extends Database{
 
     return $stmt;
   }
-  protected function readCat($cat_name){
+  protected function readCatTable($cat_name){
 
     $cat_id = $this->readCatId($cat_name);
 
@@ -29,14 +29,43 @@ class Product extends Database{
     return $stmt;
   }
 
-  protected function createProduct($prod_name, $prod_price, $prod_description, $prod_image, $cat_name){
+  protected function readProductRecord($prod_id){
+
+    $query = 'SELECT * FROM product WHERE prod_id = ?;';
+    $stmt = $this->connect()->prepare($query);
+
+    if(!$stmt->execute(array($prod_id))){
+      $stmt = null;
+      header("location: ../index.php?error=stmtfailed");
+      exit();
+    }
+
+    return $stmt;
+  }
+
+  protected function createProduct($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_name){
 
     $cat_id = $this->readCatId($cat_name);
 
-    $query = 'INSERT INTO product (prod_name, prod_price, prod_description, prod_image, cat_id) VALUES (?, ?, ?, ?, ?);';
+    $query = 'INSERT INTO product (prod_name, prod_price, prod_description, prod_image, prod_image_file, cat_id) VALUES (?, ?, ?, ?, ?, ?);';
     $stmt = $this->connect()->prepare($query);
 
-    if(!$stmt->execute(array($prod_name, $prod_price, $prod_description, $prod_image, $cat_id))){
+    if(!$stmt->execute(array($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_id))){
+      $stmt = null;
+      return "Error: Statement failed!";
+    }
+    $stmt = null;
+    return "";
+  }
+
+  protected function updateProduct($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_name, $prod_id){
+
+    $cat_id = $this->readCatId($cat_name);
+
+    $query = 'UPDATE product SET prod_name = ?, prod_price = ?, prod_description = ?, prod_image = ?, prod_image_file = ?, cat_id = ? WHERE prod_id = ?;';
+    $stmt = $this->connect()->prepare($query);
+
+    if(!$stmt->execute(array($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_id, $prod_id))){
       $stmt = null;
       header("location: ../index.php?error=stmtfailed");
       exit();
