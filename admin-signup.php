@@ -1,27 +1,33 @@
 <?php 
 session_start();
-$success_msg = $error_msg = "";
 
-if(isset($_POST["submit"]))
+if(!isset($_SESSION["adminid"])){
+  header("location: admin-login.php");
+}
+else
 {
-  $email = $_POST["email"];
-  $pass = $_POST["pass"];
-  $passRepeat = $_POST["passRepeat"];
-  $fname = $_POST["fname"];
-  $lname = $_POST["lname"];
+  $success_msg = $error_msg = "";
 
-  include("classes/Database.class.php");
-  include("classes/Signup.class.php");
-  include("classes/SignupCon.class.php");
+  if(isset($_POST["submit"]))
+  {
+    $email = $_POST["email"];
+    $pass = $_POST["pass"];
+    $passRepeat = $_POST["passRepeat"];
+    $fname = $_POST["fname"];
+    $lname = $_POST["lname"];
 
-  $signup = new SignupController($email, $pass, $passRepeat, $fname, $lname);
-  $error_msg = $signup->signupAdmin();
+    include("classes/Database.class.php");
+    include("classes/Signup.class.php");
+    include("classes/SignupCon.class.php");
 
-  if(empty($error_msg)){
-    $success_msg = "Account created successfully!";
+    $signup = new SignupController($email, $pass, $passRepeat, $fname, $lname);
+    $error_msg = $signup->signupAdmin();
+
+    if(empty($error_msg)){
+      $success_msg = "Account created successfully!";
+    }
   }
 }
-
 ?>
 
 <!doctype html>

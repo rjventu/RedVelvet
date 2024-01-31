@@ -1,63 +1,69 @@
 <?php 
 session_start();
-$success_msg = $error_msg = "";
 
-include("classes/Database.class.php");
-include("classes/Product.class.php");
-include("classes/ProductCon.class.php");
-
-function prepareFile($fileName, $fileTmpName, $fileSize, $fileError){
-  $fileExt = explode('.', $fileName);
-  $fileActualExt = strtolower(end($fileExt));
-  $allow = array('jpg', 'jpeg', 'png');
-  if (in_array($fileActualExt, $allow)) {
-    if($fileError === 0){
-      if($fileSize < 500000){
-
-        $fileNameNew = uniqid('', true).".".$fileActualExt;
-        $fileDestination = 'assets/uploads/'.$fileNameNew;
-        
-        return array($fileName, $fileNameNew, $fileDestination, "");
-      }else{
-        return array("","","","Error: File size must be below 500mb.");
-      }
-    }else{
-      return array("","","","Error: There was an error in uploading your file.");
-    }
-  }else{
-    return array("","","","Error: Valid file types are jpg, jpeg, and png.");
-  }
-
+if(!isset($_SESSION["adminid"])){
+  header("location: admin-login.php");
 }
-
-if(isset($_POST["submit"]))
+else
 {
   $success_msg = $error_msg = "";
 
-  //gets values from form
-  $prod_name = $_POST["prod_name"];
-  $prod_price = $_POST["prod_price"];
-  $prod_description = $_POST["prod_description"];
-  $cat_name = $_POST["cat_name"];
+  include("classes/Database.class.php");
+  include("classes/Product.class.php");
+  include("classes/ProductCon.class.php");
 
-  // gets values for file input
-  $file = $_FILES['prod_image'];
-  $fileName = $_FILES['prod_image']['name'];
-  $fileTmpName = $_FILES['prod_image']['tmp_name'];
-  $fileSize = $_FILES['prod_image']['size'];
-  $fileError = $_FILES['prod_image']['error'];
+  function prepareFile($fileName, $fileTmpName, $fileSize, $fileError){
+    $fileExt = explode('.', $fileName);
+    $fileActualExt = strtolower(end($fileExt));
+    $allow = array('jpg', 'jpeg', 'png');
+    if (in_array($fileActualExt, $allow)) {
+      if($fileError === 0){
+        if($fileSize < 500000){
 
-  list($prod_image, $prod_image_file, $fileDestination, $error_msg) = prepareFile($fileName, $fileTmpName, $fileSize, $fileError);
+          $fileNameNew = uniqid('', true).".".$fileActualExt;
+          $fileDestination = 'assets/uploads/'.$fileNameNew;
+          
+          return array($fileName, $fileNameNew, $fileDestination, "");
+        }else{
+          return array("","","","Error: File size must be below 500mb.");
+        }
+      }else{
+        return array("","","","Error: There was an error in uploading your file.");
+      }
+    }else{
+      return array("","","","Error: Valid file types are jpg, jpeg, and png.");
+    }
 
-  $product = new ProductController($prod_id, $prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_name);
-  $error_msg = $product->addProduct();
+  }
 
-  if(empty($error_msg)){
-    move_uploaded_file($fileTmpName, $fileDestination);
-    $success_msg = "Product added successfully!";
+  if(isset($_POST["submit"]))
+  {
+    $success_msg = $error_msg = "";
+
+    //gets values from form
+    $prod_name = $_POST["prod_name"];
+    $prod_price = $_POST["prod_price"];
+    $prod_description = $_POST["prod_description"];
+    $cat_name = $_POST["cat_name"];
+
+    // gets values for file input
+    $file = $_FILES['prod_image'];
+    $fileName = $_FILES['prod_image']['name'];
+    $fileTmpName = $_FILES['prod_image']['tmp_name'];
+    $fileSize = $_FILES['prod_image']['size'];
+    $fileError = $_FILES['prod_image']['error'];
+
+    list($prod_image, $prod_image_file, $fileDestination, $error_msg) = prepareFile($fileName, $fileTmpName, $fileSize, $fileError);
+
+    $product = new ProductController($prod_id, $prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_name);
+    $error_msg = $product->addProduct();
+
+    if(empty($error_msg)){
+      move_uploaded_file($fileTmpName, $fileDestination);
+      $success_msg = "Product added successfully!";
+    }
   }
 }
-
 ?>
 
 <!doctype html>

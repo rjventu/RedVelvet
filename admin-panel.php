@@ -1,40 +1,49 @@
 <?php
 session_start();
 
-include("classes/Database.class.php");
-include("classes/Product.class.php");
-include("classes/ProductCon.class.php");
+if(!isset($_SESSION["adminid"])){
 
-$cat_name = "";
+  header("location: admin-login.php");
 
-if (isset($_GET['id'])) {
-  $prod_id = $_GET['id'];
-
-  $product = new ProductController($prod_id);
-  $error_msg = $product->removeRecord();
-  
-  if (empty($error_msg)) {
-    echo '<script>alert("Deleted Successfully!")</script>';
-  }else{
-    echo '<script>alert('.$error_msg.')</script>';
-  }
 }
-
-$product = new ProductController();
-if(isset($_POST["submit"]))
+else
 {
-  // gets filtered table
-  $cat_name = $_POST["cat_name"];
-  
-  if(empty($cat_name)){
-    $result = $product->getTable();
-  }else{
-    $result = $product->getCatTable($cat_name);
+
+  include("classes/Database.class.php");
+  include("classes/Product.class.php");
+  include("classes/ProductCon.class.php");
+
+  $cat_name = "";
+
+  if (isset($_GET['id'])) {
+    $prod_id = $_GET['id'];
+
+    $product = new ProductController($prod_id);
+    $error_msg = $product->removeRecord();
+    
+    if (empty($error_msg)) {
+      echo '<script>alert("Deleted Successfully!")</script>';
+    }else{
+      echo '<script>alert('.$error_msg.')</script>';
+    }
   }
-}
-else{
-  // gets normal table
-  $result = $product->getTable();
+
+  $product = new ProductController();
+  if(isset($_POST["submit"]))
+  {
+    // gets filtered table
+    $cat_name = $_POST["cat_name"];
+    
+    if(empty($cat_name)){
+      $result = $product->getTable();
+    }else{
+      $result = $product->getCatTable($cat_name);
+    }
+  }
+  else{
+    // gets normal table
+    $result = $product->getTable();
+  }
 }
 ?>
 
