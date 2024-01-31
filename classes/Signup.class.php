@@ -8,8 +8,7 @@ class Signup extends Database{
 
     if(!$stmt->execute(array($email))){
       $stmt = null;
-      header("location: ../index.php?error=stmtfailed");
-      exit();
+      return "Error: Statement failed!";
     }
 
     if($stmt->rowCount() > 0){
@@ -29,10 +28,10 @@ class Signup extends Database{
 
     if(!$stmt->execute(array($email, $hashedPass, $fname, $lname))){
       $stmt = null;
-      header("location: ../index.php?error=stmtfailed");
-      exit();
+      return "Error: Statement failed!";
     }
 
     $stmt = null;
+    return "";
   }
 }

@@ -8,14 +8,12 @@ class Login extends Database{
 
     if(!$stmt->execute(array($email))){
       $stmt = null;
-      header("location: ../index.php?error=stmtfailed");
-      exit();
+      return "Error: Statement failed.";
     }
 
     if($stmt->rowCount() == 0){
       $stmt = null;
-      header("location: ../index.php?error=usernotfound1");
-      exit();
+      return "Error: User not found.";
     }
 
     $passHashed = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -23,31 +21,29 @@ class Login extends Database{
 
     if(!$checkPass){
       $stmt = null;
-      header("location: ../index.php?error=wrongpass");
-      exit();
+      return "Error: Incorrect password.";
     }elseif($checkPass){
       $query = 'SELECT * FROM admin WHERE admin_email = ? AND admin_password = ?;';
       $stmt = $this->connect()->prepare($query);
 
       if(!$stmt->execute(array($email, $passHashed[0]["admin_password"]))){
         $stmt = null;
-        header("location: ../index.php?error=stmtfailed");
-        exit();
+        return "Error: Statement failed.";
       }
 
       if($stmt->rowCount() == 0){
         $stmt = null;
-        header("location: ../index.php?error=usernotfound2");
-        exit();
+        return "Error: User not found.";
       }
 
       $admin = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
       session_start();
       $_SESSION["adminid"] = $admin[0]["admin_id"];
-      $_SESSION["adminemail"] = $admin[0]["admin_email"];
+      $_SESSION["adminfname"] = $admin[0]["admin_fname"];
 
       $stmt = null;
+      return "";
     }
   }
 }
