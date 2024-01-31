@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $success_msg = $error_msg = "";
 
 include("classes/Database.class.php");
@@ -145,7 +146,7 @@ if(isset($_POST["submit"]))
 
               <div class="form-group mb-5">
                 <div class="form-label">Description</div>
-                <textarea class="form-control" id="prod_description" name="prod_description" rows="3"></textarea>
+                <textarea class="form-control" id="prod_description" name="prod_description" rows="3" placeholder="Type your description here"></textarea>
               </div>
 
               <div class="form-group">

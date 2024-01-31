@@ -12,10 +12,9 @@ class LoginController extends Login{
 
   public function loginAdmin(){
     if($this->emptyInput()){
-      header("location: ../index.php?error=emptyinput");
-      exit();
+      return "Error: Please complete all fields.";
     }
-    $this->getUser($this->email, $this->pass);
+    return $this->getUser($this->email, $this->pass);
   }
 
   // Error Handlers

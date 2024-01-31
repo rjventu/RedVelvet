@@ -18,27 +18,22 @@ class SignupController extends Signup{
 
   public function signupAdmin(){
     if($this->emptyInput()){
-      header("location: ../index.php?error=emptyinput");
-      exit();
+      return "Error: Please complete all fields.";
     }
     if($this->invalidName()){
-      header("location: ../index.php?error=invalidname");
-      exit();
+      return "Error: Invalid name! Valid characters include A-Z and a-z.";
     }
     if($this->invalidEmail()){
-      header("location: ../index.php?error=invalidemail");
-      exit();
+      return "Error: Please input a valid email address.";
     }
     if($this->noMatch()){
-      header("location: ../index.php?error=nomatch");
-      exit();
+      return "Error: Your passwords are not matching.";
     }
     if($this->userExists()){
-      header("location: ../index.php?error=userexists");
-      exit();
+      return "Error: This email already has a registered account.";
     }
 
-    $this->setUser($this->email, $this->pass, $this->fname, $this->lname);
+    return $this->setUser($this->email, $this->pass, $this->fname, $this->lname);
   }
 
   // Error Handlers

@@ -119,21 +119,6 @@ a {
     cursor: pointer;
 }
 
-.admin-navbar a{ /*not working, debug*/
-    cursor: none;
-}
-
-.product-listing-table .btn-submit{
-    font-size: 12px;
-    padding: 5px 8px;
-    margin: 0 5px 5px;
-}
-
-.product-listing-filter .btn-submit{
-    font-size: 20px;
-    padding: 8px 15px;
-}
-
 /* [3] HEADINGS */
 h1 {
     font-weight: var(--fweight-heading);
@@ -894,9 +879,44 @@ input, #date, #payment {
     border-radius: 20px;
 }
 
-#product-listing-add {
-    border-radius: 0;
-    font-size: medium;
+#add-product-btn {
+    font-family: var(--font-link);
+    font-size: 22px;
+    padding: 0px 15px;
+    padding-top: 5px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: #D0051B;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+#add-product-btn:hover{
+    color: #D0051B;
+    background-color: #FFFFFF;
+}
+
+#filter-btn{
+    font-size: 22px;
+    padding: 0px 15px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+#filter-dropdown{
+    border-radius: 20px;
+    border: 0px;
+    padding-left: 16px;
+}
+
+.admin-navbar a{ 
+    cursor: none;
+}
+
+.product-listing-table .btn-submit{
+    font-size: 12px;
+    padding: 5px 8px;
+    margin: 0 5px 5px;
 }
 
 .product-add-container{
@@ -927,13 +947,35 @@ input, #date, #payment {
 
 .product-add-container .form-label{
     margin-bottom: 0.5rem;
+    color: var(--col2);
+    font-weight: bold;
+    font-family: var(--font-link);
 }
 
 .product-add-container .upload-image{
-    padding: 0.5rem;
-    border: 1px solid #A6A6A6;
+    padding: 0.35rem;
+    border: none;
+    border-bottom: 2px solid black;
     width: 100%;
 }
+
+.product-add-container textarea{
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+}
+
+.product-add-container textarea:focus,
+.product-add-container select:focus{
+    outline: 0 none;
+    box-shadow: none;
+    border:none;
+    border-bottom: var(--col2) solid 2px;
+}
+
+
+
+
 
 #upload-form {
     border: 1px solid #A6A6A6;
@@ -946,6 +988,31 @@ input, #date, #payment {
 }
 #upload-form:hover{
     background-color: #A6A6A6;
+}
+
+.admin-sidebar img{
+    max-width: 95%;
+    max-height: 95%;
+}
+
+.admin-sidebar h2{
+    font-size: 24px;
+}
+
+.admin-sidebar .btn{
+    font-family: var(--font-link);
+    font-size: 18px;
+    border: 1px solid white;
+    margin: 0;
+}
+
+.admin-sidebar .btn:hover{
+    background-color: white;
+    color: #D0051B;
+}
+
+#admin-panel-navbar-logo:hover{
+    cursor: default;
 }
 
 /* mobile */

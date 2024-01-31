@@ -1,3 +1,29 @@
+<?php 
+session_start();
+$success_msg = $error_msg = "";
+
+if(isset($_POST["submit"]))
+{
+  $email = $_POST["email"];
+  $pass = $_POST["pass"];
+  $passRepeat = $_POST["passRepeat"];
+  $fname = $_POST["fname"];
+  $lname = $_POST["lname"];
+
+  include("classes/Database.class.php");
+  include("classes/Signup.class.php");
+  include("classes/SignupCon.class.php");
+
+  $signup = new SignupController($email, $pass, $passRepeat, $fname, $lname);
+  $error_msg = $signup->signupAdmin();
+
+  if(empty($error_msg)){
+    $success_msg = "Account created successfully!";
+  }
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -16,11 +42,28 @@
     <div class="container">
       <div class="row mb-4">
         <div class="col">
-          <h2 class="text-center">Create An Admin Account</h2>
+          <h2 class="text-center">Create New <br/>Admin Account</h2>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col d-flex justify-content-center">
+          <!-- Displays error/success message -->
+          <?php  
+            if(!empty($success_msg)){ 
+            ?> 
+            <span class="alert alert-success"><?php echo $success_msg; ?></span> 
+            <?php  
+            }
+            if (!empty($error_msg)){
+            ?> 
+            <span class="alert alert-danger"><?php echo $error_msg; ?></span> 
+            <?php  
+            }
+          ?>
         </div>
       </div>
       <div class="row">
-        <form class="container" action="includes/signup.inc.php" method="post">
+        <form class="container" action="admin-signup.php" method="post">
           <div class="row mb-4">
             <div class="col d-flex justify-content-center">
               <input type="email" id="email" name="email" placeholder="Email">
@@ -53,7 +96,7 @@
           </div>
           <div class="row">
             <div class="col d-flex justify-content-center">
-              <a class="mt-3" href="index.php" style="color:gray;">Go back</a>
+              <a class="mt-3" href="admin-panel.php" style="color:gray;">Go back</a>
             </div>
           </div>
         </form>

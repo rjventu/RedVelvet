@@ -1,4 +1,5 @@
 <?php
+session_start();
 $success_msg = $error_msg = "";
 
 include("classes/Database.class.php");
