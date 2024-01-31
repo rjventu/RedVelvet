@@ -9,8 +9,8 @@ class ProductController extends Product{
   private $prod_image_file;
   private $cat_name;
   
-  public function __construct($prod_name=null, $prod_price=null, $prod_description=null, $prod_image=null, $prod_image_file=null, $cat_name=null){
-    // $this->prod_id = $prod_id;
+  public function __construct($prod_id=null, $prod_name=null, $prod_price=null, $prod_description=null, $prod_image=null, $prod_image_file=null, $cat_name=null){
+    $this->prod_id = $prod_id;
     $this->prod_name = $prod_name;
     $this->prod_price = $prod_price;
     $this->prod_description = $prod_description;
@@ -38,20 +38,26 @@ class ProductController extends Product{
     if($this->invalidName()){
       return "Error: Invalid name! Valid characters include A-Z and a-z.";
     }else{
-      $this->createProduct($this->prod_name, $this->prod_price, $this->prod_description, $this->prod_image, $this->prod_image_file, $this->cat_name);
+      return $this->createProduct($this->prod_name, $this->prod_price, $this->prod_description, $this->prod_image, $this->prod_image_file, $this->cat_name);
     }
   }
 
   public function editProduct(){
-    if($this->emptyInput()){
-      header("location: ../index.php?error=emptyinput");
-      exit();
-    }
     if($this->invalidName()){
-      header("location: ../index.php?error=invalidname");
-      exit();
+      return "Error: Invalid name! Valid characters include A-Z and a-z.";
     }
-    $this->updateProduct($this->prod_name, $this->prod_price, $this->prod_description, $this->prod_image, $this->prod_image_file, $this->cat_name, $this->prod_id);
+    return $this->updateProduct($this->prod_name, $this->prod_price, $this->prod_description, $this->prod_image, $this->prod_image_file, $this->cat_name, $this->prod_id);
+  }
+
+  public function editProductNoImg(){
+    if($this->invalidName()){
+      return "Error: Invalid name! Valid characters include A-Z and a-z.";
+    }
+    return $this->updateProductNoImg($this->prod_name, $this->prod_price, $this->prod_description, $this->cat_name, $this->prod_id);
+  
+  }
+  public function removeRecord(){
+    return $this->deleteProductRecord($this->prod_id);
   }
 
   public function getCatName($cat_id){
@@ -62,7 +68,7 @@ class ProductController extends Product{
   // error handlers
 
   private function emptyInput(){
-    if(empty($this->prod_name) || empty($this->prod_price) || empty($this->prod_image) || empty($this->cat_name)){
+    if(empty($this->prod_name) || empty($this->prod_price) || empty($this->cat_name)){
       return true;
     }else{
       return false;

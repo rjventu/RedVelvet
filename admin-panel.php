@@ -5,7 +5,7 @@ include("classes/Database.class.php");
 include("classes/Product.class.php");
 include("classes/ProductCon.class.php");
 
-$cat_name="";
+$cat_name = "";
 
 $product = new ProductController();
 if(isset($_POST["submit"]))
@@ -83,7 +83,8 @@ else
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
                 <th scope="col">Image file</th>
-                <th scope="col" class="w-25">Action</th>
+                <th scope="col">Description</th>
+                <th scope="col" style="width:20%">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -96,13 +97,36 @@ else
                     <td>$row[prod_name]</td>
                     <td>$$row[prod_price]</td>
                     <td>$row[prod_image]</td>
+                    <td>$row[prod_description]</td>
                     <td>
-                      <a class='btn-submit' href='admin-product-edit.php?id=$row[prod_id]'>Edit</a>
-                      <a class='btn-submit' href='admin-product-delete.php?id=$row[prod_id]'>Delete</a>
+                    <a class='btn-submit' href='admin-product-edit.php?id=$row[prod_id]'>Edit</a>
+                    <a class='btn-submit' href='includes/product-delete.inc.php?id=$row[prod_id]'
+                      onclick="."return confirm('Are you sure you would like to delete this product?');".";
+                      >Delete</a>
                     </td>
                   </tr>
                   ";
                 }
+              ?>
+              <?php
+                // while($row = $result->fetch(PDO::FETCH_ASSOC)){
+                //   echo'
+                //   <tr>
+                //     <td>$row[prod_id]</td>
+                //     <td>'.$product->getCatName($row["cat_id"]).'</td>
+                //     <td>$row[prod_name]</td>
+                //     <td>$row[prod_price]</td>
+                //     <td>$row[prod_image]</td>
+                //     <td>$row[prod_description]</td>
+                //     <td>
+                //     <a class="btn-submit" href="admin-product-edit.php?id=$row[prod_id]">Edit</a>
+                //     <a class="btn-submit" href="includes/product-delete.inc.php?id=$row[prod_id]"
+                //       onclick="return confirm("Are you sure you would like to delete this record?");";
+                //         >Delete</a>
+                //     </td>
+                //   </tr>
+                //   ';
+                // }
               ?>
             </tbody>
           </table>

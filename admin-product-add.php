@@ -1,55 +1,59 @@
 <?php 
 $success_msg = $error_msg = "";
 
-if(isset($_POST["submit"]))
-{
-  $success_msg = $error_msg = "";
+include("classes/Database.class.php");
+include("classes/Product.class.php");
+include("classes/ProductCon.class.php");
 
-  $file = $_FILES['prod_image'];
-
-  $fileName = $_FILES['prod_image']['name'];
-  $fileTmpName = $_FILES['prod_image']['tmp_name'];
-  $fileSize = $_FILES['prod_image']['size'];
-  $fileError = $_FILES['prod_image']['error'];
-
+function prepareFile($fileName, $fileTmpName, $fileSize, $fileError){
   $fileExt = explode('.', $fileName);
   $fileActualExt = strtolower(end($fileExt));
   $allow = array('jpg', 'jpeg', 'png');
-
   if (in_array($fileActualExt, $allow)) {
     if($fileError === 0){
       if($fileSize < 500000){
 
         $fileNameNew = uniqid('', true).".".$fileActualExt;
         $fileDestination = 'assets/uploads/'.$fileNameNew;
-
-        $prod_name = $_POST["prod_name"];
-        $prod_price = $_POST["prod_price"];
-        $prod_description = $_POST["prod_description"];
-        $prod_image = $fileName;
-        $prod_image_file = $fileNameNew;
-        $cat_name = $_POST["cat_name"];
-
-        include("classes/Database.class.php");
-        include("classes/Product.class.php");
-        include("classes/ProductCon.class.php");
-
-        $product = new ProductController($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file,  $cat_name);
-        $error_msg = $product->addProduct();
-
+        
+        return array($fileName, $fileNameNew, $fileDestination, "");
       }else{
-        $error_msg = "Error: File size must be below 500mb.";
+        return array("","","","Error: File size must be below 500mb.");
       }
     }else{
-      $error_msg = "Error: There was an error in uploading your file.";
+      return array("","","","Error: There was an error in uploading your file.");
     }
   }else{
-    $error_msg =  "Error: Valid file types are jpg, jpeg, and png.";
+    return array("","","","Error: Valid file types are jpg, jpeg, and png.");
   }
-  
+
+}
+
+if(isset($_POST["submit"]))
+{
+  $success_msg = $error_msg = "";
+
+  //gets values from form
+  $prod_name = $_POST["prod_name"];
+  $prod_price = $_POST["prod_price"];
+  $prod_description = $_POST["prod_description"];
+  $cat_name = $_POST["cat_name"];
+
+  // gets values for file input
+  $file = $_FILES['prod_image'];
+  $fileName = $_FILES['prod_image']['name'];
+  $fileTmpName = $_FILES['prod_image']['tmp_name'];
+  $fileSize = $_FILES['prod_image']['size'];
+  $fileError = $_FILES['prod_image']['error'];
+
+  list($prod_image, $prod_image_file, $fileDestination, $error_msg) = prepareFile($fileName, $fileTmpName, $fileSize, $fileError);
+
+  $product = new ProductController($prod_id, $prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_name);
+  $error_msg = $product->addProduct();
+
   if(empty($error_msg)){
     move_uploaded_file($fileTmpName, $fileDestination);
-    $success_msg = "Successfully added product!";
+    $success_msg = "Product added successfully!";
   }
 }
 

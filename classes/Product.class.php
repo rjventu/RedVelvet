@@ -67,11 +67,60 @@ class Product extends Database{
 
     if(!$stmt->execute(array($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_id, $prod_id))){
       $stmt = null;
-      header("location: ../index.php?error=stmtfailed");
-      exit();
+      return "Error: Statement failed!";
     }
     $stmt = null;
+    return "";
   }
+
+  protected function updateProductNoImg($prod_name, $prod_price, $prod_description, $cat_name, $prod_id){
+
+    $cat_id = $this->readCatId($cat_name);
+
+    $query = 'UPDATE product SET prod_name = ?, prod_price = ?, prod_description = ?, cat_id = ? WHERE prod_id = ?;';
+    $stmt = $this->connect()->prepare($query);
+
+    if(!$stmt->execute(array($prod_name, $prod_price, $prod_description, $cat_id, $prod_id))){
+      $stmt = null;
+      return "Error: Statement failed!";
+    }
+    $stmt = null;
+    return "";
+  
+  }
+  protected function deleteProductRecord($prod_id){
+
+    $query = 'DELETE FROM product WHERE prod_id = ?';
+    $stmt = $this->connect()->prepare($query);
+
+    if(!$stmt->execute(array($prod_id))){
+      $stmt = null;
+      return "Error: Statement failed!";
+    }
+    $stmt = null;
+    return "";
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   private function readCatId($cat_name){
     $query = 'SELECT cat_id FROM category WHERE cat_name = ?;';
