@@ -62,10 +62,10 @@ if(isset($_POST["submit"]))
       <form class="container" action="admin-login.php" method="post">
         <div class="row mb-5">
           <div class="col d-flex justify-content-center my-3">
-            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="email" id="email" name="email" placeholder="Email" required>
           </div>
           <div class="col d-flex justify-content-center my-3">
-            <input type="password" id="password" name="pass" placeholder="Password">
+            <input type="password" id="password" name="pass" placeholder="Password" required>
           </div>
         </div>
         <div class="row mb-1">

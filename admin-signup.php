@@ -72,27 +72,27 @@ else
         <form class="container" action="admin-signup.php" method="post">
           <div class="row mb-4">
             <div class="col d-flex justify-content-center">
-              <input type="email" id="email" name="email" placeholder="Email">
+              <input type="email" id="email" name="email" placeholder="Email" required>
             </div>
           </div>
           <div class="row mb-4">
             <div class="col d-flex justify-content-center">
-              <input type="password" id="password" name="pass" placeholder="Password">
+              <input type="password" id="password" name="pass" placeholder="Password" required>
             </div>
           </div>
           <div class="row mb-4">
             <div class="col d-flex justify-content-center">
-                <input type="password" id="password" name="passRepeat" placeholder="Repeat Password">
+                <input type="password" id="password" name="passRepeat" placeholder="Repeat Password" required>
             </div>
           </div>
           <div class="row mb-4">
             <div class="col d-flex justify-content-center">
-              <input type="text" id="fname" name="fname" placeholder="First Name">
+              <input type="text" id="fname" name="fname" placeholder="First Name" required>
             </div>
           </div>
           <div class="row mb-5">
             <div class="col d-flex justify-content-center">
-              <input type="text" id="lname" name="lname" placeholder="Last Name">
+              <input type="text" id="lname" name="lname" placeholder="Last Name" required>
             </div>
           </div>
           <div class="row mb-1">
