@@ -124,7 +124,7 @@ else
 <html lang="en">
 
 <!-- Head -->
-<?php include("head-tags.php")?>
+<?php include("..\static\head-tags.php")?>
   <title>Red Velvet KH - Edit Product</title>
 </head>
   

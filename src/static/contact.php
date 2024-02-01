@@ -18,7 +18,7 @@
         <div class="social-items">
             <article>
                 <h2>Socials</h2>
-                <img src="assets/social icons (bigger).png" usemap="#social-big" width="100px">
+                <img src="../../assets/social icons (bigger).png" usemap="#social-big" width="100px">
             </article>
             <article>
                 <h2>Email</h2>

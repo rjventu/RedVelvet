@@ -1,6 +1,6 @@
 <div>
     <a data-toggle="modal" data-target="#inquirychat" class="inquiry-btn">
-      <img src="assets/speech-bubble.png">
+      <img src="../../assets/speech-bubble.png">
     </a>
 </div>
 

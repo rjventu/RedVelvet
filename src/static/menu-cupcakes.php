@@ -20,17 +20,17 @@
 <section class="menu-lay">
     <div class="image-container-cupcakes">
         <a data-toggle="modal" data-target="#cupcake1ModalCenter">
-            <img class="card-img" src="assets/food/car2.jpg">
+            <img class="card-img" src="../../assets/food/car2.jpg">
         </a>
     </div>
     <div class="image-container-cupcakes">
         <a data-toggle="modal" data-target="#cupcake2ModalCenter">
-            <img class="card-img" src="assets/food/cupcakes2.jpg">
+            <img class="card-img" src="../../assets/food/cupcakes2.jpg">
         </a>
     </div>
     <div class="image-container-cupcakes">
         <a data-toggle="modal" data-target="#cupcake3ModalCenter">
-            <img class="card-img" src="assets/food/cupcakes3.jpg">
+            <img class="card-img" src="../../assets/food/cupcakes3.jpg">
         </a>
     </div>
 </section>
@@ -66,21 +66,21 @@
 <div class="modal fade" id="cupcake1ModalCenter" tabindex="-1" role="dialog" aria-labelledby="cupcake1ModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <img src="assets/food/car2.jpg">
+            <img src="../../assets/food/car2.jpg">
         </div>
     </div>
 </div>
 <div class="modal fade" id="cupcake2ModalCenter" tabindex="-1" role="dialog" aria-labelledby="cupcake2ModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <img src="assets/food/cupcakes2.jpg">
+            <img src="../../assets/food/cupcakes2.jpg">
         </div>
     </div>
 </div>
 <div class="modal fade" id="cupcake3ModalCenter" tabindex="-1" role="dialog" aria-labelledby="cupcake3ModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <img src="assets/food/cupcakes3.jpg">
+            <img src="../../assets/food/cupcakes3.jpg">
         </div>
     </div>
 </div>
