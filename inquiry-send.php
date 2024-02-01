@@ -23,8 +23,6 @@ function invalidEmail(){
   }
 }
 
-
-
 if(isset($_POST['send'])){
 
   if(emptyInput()){
@@ -46,30 +44,31 @@ if(isset($_POST['send'])){
     
     $mail->isSMTP();
     $mail->SMTPAuth = true;
-    
+
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
-    
+
     $mail->Username = 'redvelvetkh.inq@gmail.com';
-    $mail->Password = 'jeknjpdzxngpfzdd';
+    $mail->Password = 'yiixoayxgesgjovh';
     
-    $mail->setFrom($email);
+    $mail->setFrom('from@example.com');
     $mail->addAddress('redvelvetkh.inq@gmail.com');
     
     $mail->isHTML(true);
     $mail->Subject = $subject;
     $mail->Body = $messageNew;
-    
-    $mail->send();
-    
-    echo
-    "
-    <script>
-    alert('Message sent!');
-    document.location.href = 'index.php';
-    </script>
-    ";
+        
+    if(!$mail->send()){
+      echo "<script>alert('Mail not sent: ". $mail->ErrorInfo . "');</script>";
+    }else{
+      echo
+      "
+      <script>
+      alert('Message sent!');
+      document.location.href = 'src/static/index.php';
+      </script>
+      ";
+    }
   }
-  
 }

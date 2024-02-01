@@ -21,7 +21,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#delyemacakeModalCenter">
-                <img class="card-img" src="assets/food/del-yemacake.jpg">
+                <img class="card-img" src="../../assets/food/del-yemacake.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h4>Bestseller!</h4>
@@ -40,7 +40,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#delredvelcreamModalCenter">
-                <img class="card-img" src="assets/food/del-redvelcream.jpg">
+                <img class="card-img" src="../../assets/food/del-redvelcream.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h4>Bestseller!</h4>
@@ -59,7 +59,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#delchocomochaModalCenter">
-                <img class="card-img" src="assets/food/del-chocomocha.jpg">
+                <img class="card-img" src="../../assets/food/del-chocomocha.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h4>Bestseller!</h4>
@@ -78,7 +78,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#delchocooreoModalCenter">
-                <img class="card-img" src="assets/food/del-chocooreo.jpg">
+                <img class="card-img" src="../../assets/food/del-chocooreo.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Choco Oreo</h2>
@@ -95,7 +95,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#treslechescakeModalCenter">
-                <img class="card-img" src="assets/food/treslechescake.jpg">
+                <img class="card-img" src="../../assets/food/treslechescake.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Tres Leches with Cashew Nuts</h2>
@@ -112,7 +112,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#delpurpvelModalCenter">
-                <img class="card-img" src="assets/food/del-purpvelcream.jpg">
+                <img class="card-img" src="../../assets/food/del-purpvelcream.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Purple Velvet Cream</h2>
@@ -129,7 +129,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#chocvanfruitcakeModalCenter">
-                <img class="card-img" src="assets/food/chocovanwfruits.jpg">
+                <img class="card-img" src="../../assets/food/chocovanwfruits.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Choco Vanilla with Fruits</h2>
@@ -155,51 +155,138 @@
 
 <!-- Menu Modal -->
 <div class="modal fade" id="delyemacakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="delyemacakeModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <img src="assets/food/del-yemacake.jpg">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
+            <img src="../../assets/food/del-yemacake.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Yema Cake with Cheese</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$14</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="delredvelcreamModalCenter" tabindex="-1" role="dialog" aria-labelledby="delredvelcreamModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <img src="assets/food/del-redvelcream.jpg">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
+            <img src="../../assets/food/del-redvelcream.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Red Velvet Cream</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$14</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="delchocomochaModalCenter" tabindex="-1" role="dialog" aria-labelledby="delchocomochaModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <img src="assets/food/del-chocomocha.jpg">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
+            <img src="../../assets/food/del-chocomocha.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Choco Mocha</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$14</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="delchocooreoModalCenter" tabindex="-1" role="dialog" aria-labelledby="delchocooreoModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <img src="assets/food/del-chocooreo.jpg">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
+            <img src="../../assets/food/del-chocooreo.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Choco Oreo</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$14</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="treslechescakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="treslechescakeModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <img src="assets/food/treslechescake.jpg">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
+            <img src="../../assets/food/treslechescake.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Tres Leches with Cashew Nuts</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$14</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="delpurpvelModalCenter" tabindex="-1" role="dialog" aria-labelledby="delpurpvelModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <img src="assets/food/del-purpvelcream.jpg">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
+            <img src="../../assets/food/del-purpvelcream.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Purple Velvet Cream</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$14</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="chocvanfruitcakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="chocvanfruitcakeModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <img src="assets/food/chocovanwfruits.jpg">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
+            <img src="../../assets/food/chocovanwfruits.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Choco Vanilla with Fruits</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$14</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

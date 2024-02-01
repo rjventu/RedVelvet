@@ -21,7 +21,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#bardoublechocoModalCenter">
-                <img class="card-img" src="assets/food/bars-doublechoco.jpg">
+                <img class="card-img" src="../../assets/food/bars-doublechoco.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h4>Bestseller!</h4>
@@ -40,7 +40,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#barsredvelModalCenter">
-                <img class="card-img" src="assets/food/redvelvet cheesecake bar.jpg">
+                <img class="card-img" src="../../assets/food/redvelvet cheesecake bar.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h4>Bestseller!</h4>
@@ -59,7 +59,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#barsbutterModalCenter">
-                <img class="card-img" src="assets/food/bars-butterscotch.jpg">
+                <img class="card-img" src="../../assets/food/bars-butterscotch.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h4>Bestseller!</h4>
@@ -78,7 +78,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#barsrevelModalCenter">
-                <img class="card-img" src="assets/food/bars-revel.jpg">
+                <img class="card-img" src="../../assets/food/bars-revel.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Revel Choco-Oat Bars</h2>
@@ -95,7 +95,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#barsnutellaModalCenter">
-                <img class="card-img" src="assets/food/bars-nutella.jpg">
+                <img class="card-img" src="../../assets/food/bars-nutella.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Nutella Brownie Swirl</h2>
@@ -112,7 +112,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#barsappleModalCenter">
-                <img class="card-img" src="assets/food/bars-apple.jpg">
+                <img class="card-img" src="../../assets/food/bars-apple.jpg">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Apple Crumble Pie</h2>
@@ -140,7 +140,7 @@
 <div class="modal fade" id="bardoublechocoModalCenter" tabindex="-1" role="dialog" aria-labelledby="bardoublechocoModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
         <div class="modal-content d-flex flex-row" id="menu-modal">
-            <img src="assets/food/bars-doublechoco.jpg">
+            <img src="../../assets/food/bars-doublechoco.jpg">
             <div class="itm-modal-right">
                 <div class="itm-desc">
                     <h2>Double Choco Brownies</h2>
@@ -160,7 +160,7 @@
 <div class="modal fade" id="barsredvelModalCenter" tabindex="-1" role="dialog" aria-labelledby="barsredvelModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
         <div class="modal-content d-flex flex-row" id="menu-modal">
-            <img src="assets/food/redvelvet cheesecake bar.jpg">
+            <img src="../../assets/food/redvelvet cheesecake bar.jpg">
             <div class="itm-modal-right">
                 <div class="itm-desc">
                     <h2>Redvelvet Cheesecake Swirl</h2>
@@ -180,7 +180,7 @@
 <div class="modal fade" id="barsbutterModalCenter" tabindex="-1" role="dialog" aria-labelledby="barsbutterModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
         <div class="modal-content d-flex flex-row" id="menu-modal">
-            <img src="assets/food/bars-butterscotch.jpg">
+            <img src="../../assets/food/bars-butterscotch.jpg">
             <div class="itm-modal-right">
                 <div class="itm-desc">
                     <h2>Butterscotch with Nuts</h2>
@@ -200,7 +200,7 @@
 <div class="modal fade" id="barsrevelModalCenter" tabindex="-1" role="dialog" aria-labelledby="barsrevelModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
         <div class="modal-content d-flex flex-row" id="menu-modal">
-            <img src="assets/food/bars-revel.jpg">
+            <img src="../../assets/food/bars-revel.jpg">
             <div class="itm-modal-right">
                 <div class="itm-desc">
                     <h2>Revel Choco-Oat Bars</h2>
@@ -219,7 +219,7 @@
 <div class="modal fade" id="barsnutellaModalCenter" tabindex="-1" role="dialog" aria-labelledby="barsnutellaModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
         <div class="modal-content d-flex flex-row" id="menu-modal">
-            <img src="assets/food/bars-nutella.jpg">
+            <img src="../../assets/food/bars-nutella.jpg">
             <div class="itm-modal-right">
                 <div class="itm-desc">
                     <h2>Nutella Brownie Swirl</h2>
@@ -238,7 +238,7 @@
 <div class="modal fade" id="barsappleModalCenter" tabindex="-1" role="dialog" aria-labelledby="barsappleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
         <div class="modal-content d-flex flex-row" id="menu-modal">
-            <img src="assets/food/bars-apple.jpg">
+            <img src="../../assets/food/bars-apple.jpg">
             <div class="itm-modal-right">
                 <div class="itm-desc">
                     <h2>Apple Crumble Pie</h2>

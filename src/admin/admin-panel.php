@@ -51,7 +51,7 @@ else
 <html lang="en">
 
 <!-- Head -->
-<?php include("head-tags.php")?>
+<?php include("..\static\head-tags.php")?>
   <title>Red Velvet KH - Admin Panel</title>
 </head>
   
@@ -66,7 +66,7 @@ else
     <div class="col admin-sidebar" style="">
       <div class="row">
         <div class="col d-flex justify-content-center">
-          <img src="assets/logoA.png" alt="RedVelvetKH Logo" class="img-fluid">
+          <img src="../../assets/logoA.png" alt="RedVelvetKH Logo" class="img-fluid">
         </div>
       </div>
       <div class="row">

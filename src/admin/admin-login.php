@@ -24,7 +24,7 @@ if(isset($_POST["submit"]))
 <html lang="en">
 
 <!-- Head -->
-<?php include("head-tags.php")?>
+<?php include("..\static\head-tags.php")?>
   <title>Red Velvet KH - Admin Login</title>
 </head>
   
@@ -75,7 +75,7 @@ if(isset($_POST["submit"]))
         </div>
         <div class="row">
           <div class="col d-flex justify-content-center">
-            <a class="mt-3" href="index.php" style="color:gray;">Go back</a>
+            <a class="mt-3" href="..\static\index.php" style="color:gray;">Go back</a>
           </div>
         </div>
       </form>

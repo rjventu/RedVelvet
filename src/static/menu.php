@@ -21,7 +21,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a href="menu-sigcakes.php">
-                <img class="card-img" src="assets/food/menu-sigcake.avif">
+                <img class="card-img" src="../../assets/food/menu-sigcake.avif">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Signature Cakes</h2>
@@ -36,7 +36,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a href="menu-cakedel.php">
-                <img class="card-img" src="assets/food/menu-delcake.avif">
+                <img class="card-img" src="../../assets/food/menu-delcake.avif">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Cake Delights</h2>
@@ -51,7 +51,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a href="menu-cheese.php">
-                <img class="card-img" src="assets/food/menu-cheese.avif">
+                <img class="card-img" src="../../assets/food/menu-cheese.avif">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Cheesecakes</h2>
@@ -66,7 +66,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a href="menu-pastries.php">
-                <img class="card-img" src="assets/food/menu-pastries.avif">
+                <img class="card-img" src="../../assets/food/menu-pastries.avif">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Pastries</h2>
@@ -81,7 +81,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a href="menu-cupcakes.php">
-                <img class="card-img" src="assets/food/menu-cupcakes.avif">
+                <img class="card-img" src="../../assets/food/menu-cupcakes.avif">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Cupcakes</h2>
@@ -96,7 +96,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a href="menu-cookies.php">
-                <img class="card-img" src="assets/food/menu-cookies.avif">
+                <img class="card-img" src="../../assets/food/menu-cookies.avif">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Cookies</h2>
@@ -111,7 +111,7 @@
     <div class="menu-card">
         <div class="image-container">
             <a href="menu-bars.php">
-                <img class="card-img" src="assets/food/menu-bars.avif">
+                <img class="card-img" src="../../assets/food/menu-bars.avif">
                 <div class="overlay overlay--blur">
                     <div class="overlay-content">
                         <h2>Bars</h2>

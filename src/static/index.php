@@ -26,11 +26,11 @@
         </div>
     </article>
     <a data-toggle="modal" data-target="#bannertopModalCenter">
-        <img src="assets/food/oreo brown.jpg">
+        <img src="../../assets/food/oreo brown.jpg">
     </a>
 </section>
 <section class="infosect">
-    <img src="assets/logo2.png">
+    <img src="../../assets/logo2.png">
     <div class="intro">
         <p>
             Need a fix for your pastry addiction? Red Velvet's got you covered! Started in 2015
@@ -43,19 +43,19 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/food/car1.jpg" alt="First slide">
+            <img src="../../assets/food/car1.jpg" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img src="assets/food/car2.jpg" alt="Second slide">
+            <img src="../../assets/food/car2.jpg" alt="Second slide">
           </div>
           <div class="carousel-item">
-            <img src="assets/food/car3.jpg" alt="Third slide">
+            <img src="../../assets/food/car3.jpg" alt="Third slide">
           </div>
           <div class="carousel-item">
-            <img src="assets/food/car4.jpg" alt="Third slide">
+            <img src="../../assets/food/car4.jpg" alt="Third slide">
           </div>
           <div class="carousel-item">
-            <img src="assets/food/car5.jpg" alt="Third slide">
+            <img src="../../assets/food/car5.jpg" alt="Third slide">
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@
 <section class="recban">
     <article class="reccol">
         <a data-toggle="modal" data-target="#redvelModalCenter">
-            <img src="assets/food/redvelvet cheesecake bar.jpg">
+            <img src="../../assets/food/redvelvet cheesecake bar.jpg">
         </a>
         <div class="itemdesc">
             <div class="itemhead">
@@ -103,13 +103,13 @@
             </p>
         </div>
         <a data-toggle="modal" data-target="#butternutModalCenter">
-            <img src="assets/food/butterscoth w nuts.jpg">
+            <img src="../../assets/food/butterscoth w nuts.jpg">
         </a>
     </article>
 </section>
 <section class="cards">
     <article class="card">
-        <img src="assets/fast-charge.png">
+        <img src="../../assets/fast-charge.png">
         <h1>Quick 
             <br>& Easy</h1>
         <p>
@@ -119,7 +119,7 @@
         </p>
     </article>
     <article class="card">
-        <img id="homepic" src="assets/home.png">
+        <img id="homepic" src="../../assets/home.png">
         <h1 id="home">Home made!</h1>
         <p>
             Red Velvet is 100% homemade and baked
@@ -128,7 +128,7 @@
         </p>
     </article>
     <article class="card">
-        <img src="assets/fast-delivery.png">
+        <img src="../../assets/fast-delivery.png">
         <h1>Grab & Nham24</h1>
         <p>
             Don't worry, we provide delivery via

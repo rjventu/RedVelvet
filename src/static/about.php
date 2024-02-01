@@ -12,7 +12,7 @@
 <?php include("header.php")?>
 
 <section class="infosect">
-    <img src="assets/logo2.png">
+    <img src="../../assets/logo2.png">
     <div class="intro">
         <p style="text-align:justify">
             It began as a self-taught hobby, then came the idea to make
