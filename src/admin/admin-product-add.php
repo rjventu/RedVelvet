@@ -21,7 +21,7 @@ else
         if($fileSize < 500000){
 
           $fileNameNew = uniqid('', true).".".$fileActualExt;
-          $fileDestination = 'assets/uploads/'.$fileNameNew;
+          $fileDestination = '../../assets/uploads/'.$fileNameNew;
           
           return array($fileName, $fileNameNew, $fileDestination, "");
         }else{
