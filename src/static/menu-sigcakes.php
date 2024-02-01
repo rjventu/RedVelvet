@@ -177,58 +177,159 @@
 
 <!-- Menu Modal-->
 <div class="modal fade" id="redvelcreamcakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="redvelcreamcakeModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/redvelcreamcake.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Red Velvet Cream</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$20</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="blackforestcakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="blackforestcakeModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/blackforestcake.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Black Forest</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$20</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="chocooreocakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="chocooreocakeModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/chocooreocake.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Choco Oreo</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$20</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="purpvelcreamcakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="purpvelcreamcakeModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/purpvelcream.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Purple Velvet Cream</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$20</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="treslechescakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="treslechescakeModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/treslechescake.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Tres Leches with Cashew Nuts</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$20</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="chocodecModalCenter" tabindex="-1" role="dialog" aria-labelledby="chocodecModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/chocodec.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Choco Decadence</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$25</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="chocvanfruitcakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="chocvanfruitcakeModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/chocovanwfruits.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Choco Vanilla with Fruits</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$20</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="yemawithcheesecakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="yemawithcheesecakeModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/yemacakewcheese.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Yema Cake with Cheese</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$20</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

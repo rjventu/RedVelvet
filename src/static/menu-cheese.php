@@ -103,30 +103,81 @@
 
 <!-- Menu Modal -->
 <div class="modal fade" id="cheeseblueModalCenter" tabindex="-1" role="dialog" aria-labelledby="cheeseblueModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/cheese-blueberry.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Blueberry Cheesecake</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$15<br/>$25</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="cheeseoreoModalCenter" tabindex="-1" role="dialog" aria-labelledby="cheeseoreoModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/cheese-oreo.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Oreo Cheesecake</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$15<br/>$25</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="cheesestrawModalCenter" tabindex="-1" role="dialog" aria-labelledby="cheesestrawModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/cheese-straw.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Strawberry Cheesecake</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$15<br/>$25</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="cheesenycModalCenter" tabindex="-1" role="dialog" aria-labelledby="cheesenycModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/cheese-nyc.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Classic New York</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$14<br/>$22</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -102,30 +102,80 @@
 
 <!-- Menu Modal -->
 <div class="modal fade" id="cookiesdoublechocoModalCenter" tabindex="-1" role="dialog" aria-labelledby="cookiesdoublechocoModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/cookies-doublechoco.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Double Choco</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$6</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="cookiesclassicModalCenter" tabindex="-1" role="dialog" aria-labelledby="cookiesclassicModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/cookies-classicchocochip.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Classic Choco Chip</h2>
+                    <h4>Bestseller!</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$6</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="cookiesfilledModalCenter" tabindex="-1" role="dialog" aria-labelledby="cookiesfilledModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/cookies-filled.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Cream Cheese-Filled</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$6</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<div class="modal fade" id="cookiesfilledModalCenter" tabindex="-1" role="dialog" aria-labelledby="cookiesfilledModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+<div class="modal fade" id="cookiesredvelModalCenter" tabindex="-1" role="dialog" aria-labelledby="cookiesfilledModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
+        <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/cookies-redvel.jpg">
+            <div class="itm-modal-right">
+                <div class="itm-desc">
+                    <h2>Red Velvet Choco Chip</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+                    </p> 
+                </div>
+                <div class="price-cart">
+                    <h3>$6</h3>
+                    <a class="btn" href="#" role="button">+ CART</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

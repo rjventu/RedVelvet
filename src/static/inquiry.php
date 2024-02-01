@@ -9,7 +9,7 @@
         <div class="modal-content">
             <div class="inquiry-modal">
               <h2 class="mb-4"> Have a question?</h2>
-              <form class="inq-form" method="post" action="inquiry-send.php">
+              <form class="inq-form" method="post" action="../../inquiry-send.php">
                 <br>
                 <div>
                   <label for="name">Name:</label>
