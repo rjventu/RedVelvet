@@ -18,14 +18,14 @@ else
     $allow = array('jpg', 'jpeg', 'png');
     if (in_array($fileActualExt, $allow)) {
       if($fileError === 0){
-        if($fileSize < 500000){
+        if($fileSize < 50000000){
 
           $fileNameNew = uniqid('', true).".".$fileActualExt;
           $fileDestination = '../../assets/uploads/'.$fileNameNew;
-          
+
           return array($fileName, $fileNameNew, $fileDestination, "");
         }else{
-          return array("","","","Error: File size must be below 500mb.");
+          return array("","","","Error: File size must be below 50mb.");
         }
       }else{
         return array("","","","Error: There was an error in uploading your file.");
@@ -53,15 +53,20 @@ else
     $fileSize = $_FILES['prod_image']['size'];
     $fileError = $_FILES['prod_image']['error'];
 
+    print_r($file);
+
     list($prod_image, $prod_image_file, $fileDestination, $error_msg) = prepareFile($fileName, $fileTmpName, $fileSize, $fileError);
 
-    $product = new ProductController($prod_id, $prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_name);
-    $error_msg = $product->addProduct();
-
     if(empty($error_msg)){
-      move_uploaded_file($fileTmpName, $fileDestination);
-      $success_msg = "Product added successfully!";
+      $product = new ProductController(null, $prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_name);
+      $error_msg = $product->addProduct();
+  
+      if(empty($error_msg)){
+        move_uploaded_file($fileTmpName, $fileDestination);
+        $success_msg = "Product added successfully!";
+      }
     }
+
   }
 }
 ?>
