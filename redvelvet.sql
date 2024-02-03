@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2024 at 03:56 PM
+-- Generation Time: Feb 03, 2024 at 06:08 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -84,6 +84,16 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`prod_id`, `prod_name`, `prod_price`, `prod_description`, `prod_image`, `prod_image_file`, `cat_id`) VALUES
+(1, 'Red Velvet Cream', 20.00, 'Delicious cake with cream', 'redvelcreamcake.jpg', '65be13c4de1971.13328071.jpg', 1),
+(2, 'Yema Cake with Cheese', 14.00, 'Sweet and cheesy', 'del-yemacake.jpg', '65be13e63d7837.58199304.jpg', 2),
+(3, 'Blueberry Cheesecake', 15.00, 'Cheesecake with blueberry jam and blueberries on top', 'cheese-blueberry.jpg', '65be141dd74f53.44733419.jpg', 3),
+(4, 'Classic Cinnamon Rolls with Glaze', 6.00, 'Sweet cinnamon buns', 'car3.jpg', '65be1466c80e16.61250316.jpg', 4);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -126,7 +136,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

@@ -30,7 +30,7 @@ else
     $allow = array('jpg', 'jpeg', 'png');
     if (in_array($fileActualExt, $allow)) {
       if($fileError === 0){
-        if($fileSize < 500000){
+        if($fileSize < 50000000){
 
           $fileNameNew = uniqid('', true).".".$fileActualExt;
           $fileDestination = '../../assets/uploads/'.$fileNameNew;
@@ -38,7 +38,7 @@ else
           
           return array($fileName, $fileNameNew, $fileDestination, "");
         }else{
-          return array("","","","Error: File size must be below 500mb.");
+          return array("","","","Error: File size must be below 50mb.");
         }
       }else{
         return array("","","","Error: There was an error in uploading your file.");
@@ -103,17 +103,18 @@ else
     {
       list($prod_image_new, $prod_image_file_new, $fileDestination, $error_msg) = prepareFile($fileName, $fileTmpName, $fileSize, $fileError);
 
-      $product = new ProductController($prod_id, $prod_name, $prod_price, $prod_description, $prod_image_new, $prod_image_file_new, $cat_name);
-      $error_msg = $product->editProduct();
-    }
-
-    if(empty($error_msg))
-    {
-      if($fileError === 0){
-        move_uploaded_file($fileTmpName, $fileDestination);
-        deleteFile($prod_image_file_old);
+      if(empty($error_msg)){
+        $product = new ProductController($prod_id, $prod_name, $prod_price, $prod_description, $prod_image_new, $prod_image_file_new, $cat_name);
+        $error_msg = $product->editProduct();
+        
+        if(empty($error_msg)){
+          if($fileError === 0){
+            move_uploaded_file($fileTmpName, $fileDestination);
+            deleteFile($prod_image_file_old);
+          }
+          $success_msg = "Product edited successfully!";
+        }
       }
-      $success_msg = "Product edited successfully!";
     }
 
   }
