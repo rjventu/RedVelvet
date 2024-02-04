@@ -98,6 +98,10 @@ else
     {
       $product = new ProductController($prod_id, $prod_name, $prod_price, $prod_description, null, null, $cat_name);
       $error_msg = $product->editProductNoImg();
+
+      if(empty($error_msg)){
+        $success_msg = "Product edited successfully!";
+      }
     }
     else // runs if there is an uploaded file
     {
