@@ -115,12 +115,12 @@ else
             <div class="col">
               
               <div class="form-group mb-5">
-                <div class="form-label">Product Name</div>
+                <div class="form-label">Product Name*</div>
                 <input type="text" id="prod_name" name="prod_name" placeholder="Choco Chip" required>
               </div>
 
               <div class="form-group mb-5">
-                <div class="form-label">Category</div>
+                <div class="form-label">Category*</div>
                 <select class="custom-select" name="cat_name" id="cat_name" required>
                   <option value="" selected>Choose a category</option>
                   <option value="Signature Cakes">Signature Cakes</option>
@@ -138,12 +138,12 @@ else
             <div class="col">
 
               <div class="form-group mb-5">
-                <div class="form-label">Price</div>
+                <div class="form-label">Price*</div>
                 <input type="number" id="prod_price" name="prod_price" min="0" max="100" step="0.01" placeholder="1.00" required>
               </div>
 
               <div class="form-group mb-5">
-                <div class="form-label">Image</div>
+                <div class="form-label">Image*</div>
                 <div class="input-group">
                   <input type="file" class="upload-image w-100" id="prod_image" name="prod_image" data-browse-on-zone-click="true" data-show-preview="true" required>
                 </div>
