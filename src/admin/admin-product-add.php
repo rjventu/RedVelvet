@@ -53,8 +53,6 @@ else
     $fileSize = $_FILES['prod_image']['size'];
     $fileError = $_FILES['prod_image']['error'];
 
-    print_r($file);
-
     list($prod_image, $prod_image_file, $fileDestination, $error_msg) = prepareFile($fileName, $fileTmpName, $fileSize, $fileError);
 
     if(empty($error_msg)){
