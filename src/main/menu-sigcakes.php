@@ -1,3 +1,14 @@
+<?php
+
+include("../admin/classes/Database.class.php");
+include("../admin/classes/Product.class.php");
+include("../admin/classes/ProductCon.class.php"); 
+
+$product = new ProductController();
+$result = $product->getCatTable("Signature Cakes");
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -17,7 +28,46 @@
     </div>
     <p>8" | good for 8-12 people</p>
 </section>
-<section class="menu-lay">
+
+<section>
+    <div class="container-fluid new-menu-lay">
+        <div class="row justify-content-center">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <?php                            
+                            while($row = $result->fetch(PDO::FETCH_ASSOC)){
+                                
+                                $bestseller = $row["bestseller"];
+
+                                echo "
+                                <div class='menu-card'>
+                                    <div class='image-container'>
+                                        <a href='menu-view.php?id=" . $row["prod_id"] . "'>
+                                            <img class='card-img' src='../../assets/uploads/" . $row["prod_image_file"] . "'>
+                                            <div class='overlay overlay--blur'>
+                                                <div class='overlay-content'>"; 
+                                                    echo $bestseller == 'Y' ? '<h4>Bestseller!</h4>' : '';
+                                                    echo "
+                                                    <h2>" . $row["prod_name"] . "</h2>
+                                                    <h3>" . $row["prod_price"] . "</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class='card-desc'>
+                                        <h2>Signature Cakes</h2>
+                                    </div>
+                                </div>
+                                ";
+                            }  
+                    ?>
+                </div>  
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="menu-lay">
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#redvelcreamcakeModalCenter">
@@ -165,7 +215,7 @@
         </div>
     </div>
     
-</section>
+</section> -->
 
 </body>
 

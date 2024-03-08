@@ -553,9 +553,20 @@ section h6 {
     align-items: center;
 }
 
+.new-menu-lay{
+    background-color: var(--col1);
+    /* display: grid; */
+    gap: 3rem;
+    padding: 5rem 3rem;
+    /* grid-template-columns: repeat(auto-fit, 450px); */
+    justify-content: center;
+    align-items: center;
+}
+
 .menu-card {
     box-shadow: 1px 1px 10px rgb(139, 139, 139);
     transition: 0.3s ease-in-out;
+    margin-bottom: 3rem;
 }
 
 .menu-card:hover {
@@ -570,8 +581,8 @@ section h6 {
 
 .image-container {
     position: relative;
-    width: 450px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
     overflow: hidden;
 }
 

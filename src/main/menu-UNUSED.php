@@ -13,7 +13,7 @@
 
 <section class="menu-banner">
     <div>
-        <h1>Check out our menu!</h1>
+        <h1>Menu</h1>
     </div>
     <p>Please pre-order at least 2 days in advance.</p>
 </section>

@@ -1,6 +1,6 @@
 <?php
 
-class Product extends Database{
+class Menu extends Database{
   protected function readProductTable(){
     $query = 'SELECT * FROM product';
     $stmt = $this->connect()->prepare($query);
