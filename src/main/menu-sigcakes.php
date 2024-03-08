@@ -33,14 +33,14 @@ $result = $product->getCatTable("Signature Cakes");
     <div class="container-fluid new-menu-lay">
         <div class="row justify-content-center">
             <div class="container">
-                <div class="row justify-content-between">
+                <div class="row justify-content-left">
                     <?php                            
                             while($row = $result->fetch(PDO::FETCH_ASSOC)){
                                 
                                 $bestseller = $row["bestseller"];
 
                                 echo "
-                                <div class='menu-card'>
+                                <div class='menu-card' style='margin-left: 0.9rem; margin-right: 0.9rem;'>
                                     <div class='image-container'>
                                         <a href='menu-view.php?id=" . $row["prod_id"] . "'>
                                             <img class='card-img' src='../../assets/uploads/" . $row["prod_image_file"] . "'>
@@ -53,9 +53,6 @@ $result = $product->getCatTable("Signature Cakes");
                                                 </div>
                                             </div>
                                         </a>
-                                    </div>
-                                    <div class='card-desc'>
-                                        <h2>Signature Cakes</h2>
                                     </div>
                                 </div>
                                 ";

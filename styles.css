@@ -955,11 +955,18 @@ input, #date, #payment {
     font-family: var(--font-main);
 }
 
-.product-add-container .form-label{
+.product-add-container .form-label,
+.product-add-container .form-check-label{
     margin-bottom: 0.5rem;
     color: var(--col2);
     font-weight: bold;
     font-family: var(--font-link);
+}
+
+.product-add-container .form-check-label{
+    margin-bottom: 0;
+    padding-top: 0.2rem;
+    padding-left: 0.5rem;
 }
 
 .product-add-container .upload-image{

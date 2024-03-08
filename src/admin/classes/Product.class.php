@@ -43,14 +43,14 @@ class Product extends Database{
     return $stmt;
   }
 
-  protected function createProduct($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_name){
+  protected function createProduct($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $bestseller, $cat_name){
 
     $cat_id = $this->readCatId($cat_name);
 
-    $query = 'INSERT INTO product (prod_name, prod_price, prod_description, prod_image, prod_image_file, cat_id) VALUES (?, ?, ?, ?, ?, ?);';
+    $query = 'INSERT INTO product (prod_name, prod_price, prod_description, prod_image, prod_image_file, bestseller, cat_id) VALUES (?, ?, ?, ?, ?, ?, ?);';
     $stmt = $this->connect()->prepare($query);
 
-    if(!$stmt->execute(array($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_id))){
+    if(!$stmt->execute(array($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $bestseller, $cat_id))){
       $stmt = null;
       return "Error: Statement failed!";
     }
@@ -58,14 +58,14 @@ class Product extends Database{
     return "";
   }
 
-  protected function updateProduct($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_name, $prod_id){
+  protected function updateProduct($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $bestseller, $cat_name, $prod_id){
 
     $cat_id = $this->readCatId($cat_name);
 
-    $query = 'UPDATE product SET prod_name = ?, prod_price = ?, prod_description = ?, prod_image = ?, prod_image_file = ?, cat_id = ? WHERE prod_id = ?;';
+    $query = 'UPDATE product SET prod_name = ?, prod_price = ?, prod_description = ?, prod_image = ?, prod_image_file = ?, bestseller = ?, cat_id = ? WHERE prod_id = ?;';
     $stmt = $this->connect()->prepare($query);
 
-    if(!$stmt->execute(array($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_id, $prod_id))){
+    if(!$stmt->execute(array($prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $bestseller, $cat_id, $prod_id))){
       $stmt = null;
       return "Error: Statement failed!";
     }
@@ -73,14 +73,14 @@ class Product extends Database{
     return "";
   }
 
-  protected function updateProductNoImg($prod_name, $prod_price, $prod_description, $cat_name, $prod_id){
+  protected function updateProductNoImg($prod_name, $prod_price, $prod_description, $bestseller, $cat_name, $prod_id){
 
     $cat_id = $this->readCatId($cat_name);
 
-    $query = 'UPDATE product SET prod_name = ?, prod_price = ?, prod_description = ?, cat_id = ? WHERE prod_id = ?;';
+    $query = 'UPDATE product SET prod_name = ?, prod_price = ?, prod_description = ?, bestseller = ?, cat_id = ? WHERE prod_id = ?;';
     $stmt = $this->connect()->prepare($query);
 
-    if(!$stmt->execute(array($prod_name, $prod_price, $prod_description, $cat_id, $prod_id))){
+    if(!$stmt->execute(array($prod_name, $prod_price, $prod_description, $bestseller, $cat_id, $prod_id))){
       $stmt = null;
       return "Error: Statement failed!";
     }

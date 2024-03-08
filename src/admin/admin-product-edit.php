@@ -67,6 +67,7 @@ else
     $prod_description = $row["prod_description"];
     $prod_image_old = $row["prod_image"];
     $prod_image_file_old = $row["prod_image_file"];
+    $bestseller = $row["bestseller"];
     $cat_name = $product->getCatName($row["cat_id"]);
   }
   else
@@ -78,6 +79,7 @@ else
     $prod_name = $_POST["prod_name"];
     $prod_price = $_POST["prod_price"];
     $prod_description = $_POST["prod_description"];
+    $bestseller = $_POST["bestseller"];
     $cat_name = $_POST["cat_name"];
     
     // fetches old filename from the database
@@ -96,7 +98,7 @@ else
     // runs if there is no uploaded file
     if($fileError === 4)
     {
-      $product = new ProductController($prod_id, $prod_name, $prod_price, $prod_description, null, null, $cat_name);
+      $product = new ProductController($prod_id, $prod_name, $prod_price, $prod_description, null, null, $bestseller, $cat_name);
       $error_msg = $product->editProductNoImg();
 
       if(empty($error_msg)){
@@ -108,7 +110,7 @@ else
       list($prod_image_new, $prod_image_file_new, $fileDestination, $error_msg) = prepareFile($fileName, $fileTmpName, $fileSize, $fileError);
 
       if(empty($error_msg)){
-        $product = new ProductController($prod_id, $prod_name, $prod_price, $prod_description, $prod_image_new, $prod_image_file_new, $cat_name);
+        $product = new ProductController($prod_id, $prod_name, $prod_price, $prod_description, $prod_image_new, $prod_image_file_new, $bestseller, $cat_name);
         $error_msg = $product->editProduct();
         
         if(empty($error_msg)){
@@ -171,13 +173,22 @@ else
           
           <div class="row">
             <div class="col">
-              
               <div class="form-group mb-5">
                 <div class="form-label">Product Name</div>
                 <input type="text" id="prod_name" name="prod_name" value="<?php echo $prod_name; ?>" required>
               </div>
-
+            </div>
+            <div class="col">
               <div class="form-group mb-5">
+                <div class="form-label">Price</div>
+                <input type="number" id="prod_price" name="prod_price" min="0" max="100" step="0.01" value="<?php echo $prod_price; ?>" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group mb-3">
                 <div class="form-label">Category</div>
                 <select class="custom-select" name="cat_name" id="cat_name" required>
                   <option value="">Choose a category</option>
@@ -190,17 +201,9 @@ else
                   <option value="Bars"<?=$cat_name == 'Bars' ? ' selected="selected"' : '';?>>Bars</option>
                 </select>
               </div>
-
             </div>
-
             <div class="col">
-
-              <div class="form-group mb-5">
-                <div class="form-label">Price</div>
-                <input type="number" id="prod_price" name="prod_price" min="0" max="100" step="0.01" value="<?php echo $prod_price; ?>" required>
-              </div>
-
-              <div class="form-group mb-5">
+              <div class="form-group mb-3">
                 <div class="form-label">Image</div>
                 <div class="input-group">
                   <input type="file" class="upload-image w-100" id="prod_image" name="prod_image" data-browse-on-zone-click="true" data-show-preview="true">
@@ -213,16 +216,21 @@ else
                   <span><p>Uploaded File: <i><?php echo $prod_image_old?></i></p></span>
                 </div>
               </div>
-
             </div>
-            
           </div>
+
           <div class="row">
             <div class="col">
 
-              <div class="form-group mb-5">
+              <div class="form-group mb-4">
                 <div class="form-label">Description</div>
                 <textarea class="form-control" id="prod_description" name="prod_description" rows="3"><?php echo $prod_description; ?></textarea>
+              </div>
+
+              <div class="form-check form-check-inline mb-5">
+                <input class="form-check-input" type="checkbox" id="bestseller" name="bestseller" value="Y" 
+                  <?=$bestseller == 'Y' ? 'checked' : '';?>>
+                <label class="form-check-label" for="bestseller">Bestseller</label>
               </div>
 
               <div class="form-group">
