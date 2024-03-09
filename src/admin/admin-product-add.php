@@ -159,11 +159,18 @@ else
                 <textarea class="form-control" id="prod_description" name="prod_description" rows="3" placeholder="Type your description here"></textarea>
               </div>
 
-              <div class="form-check form-check-inline mb-5">
-                <input class="form-check-input" type="checkbox" id="bestseller" name="bestseller" value="Y">
-                <label class="form-check-label" for="bestseller">Bestseller</label>
+              <div class="form-group mb-4">
+                <div class="form-label">Is this product a Bestseller?</div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="bestsellerR1" name="bestseller" class="custom-control-input" value="Y" required>
+                  <label class="custom-control-label" for="bestsellerR1">Yes</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="bestsellerR2" name="bestseller" class="custom-control-input" value="N">
+                  <label class="custom-control-label" for="bestsellerR2">No</label>
+                </div>
               </div>
-
+                
               <div class="form-group">
                 <div class="row d-flex justify-content-center">
                   <input type="submit" name="submit" value="ADD PRODUCT" class="btn px-3 py-1" style="width:auto">

@@ -141,7 +141,6 @@ else
                 <th scope="col">Category</th>
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
-                <th scope="col">Image file</th>
                 <th scope="col">Description</th>
                 <th scope="col" style="width:20%">Action</th>
               </tr>
@@ -156,7 +155,6 @@ else
                     <td>" . $product->getCatName($row['cat_id']) . "</td>
                     <td>" . $row["prod_name"] . "</td>
                     <td>" . $row["prod_price"] . "</td>
-                    <td>" . $row["prod_image"] . "</td>
                     <td>" . $row["prod_description"] . "</td>
                     <td>"?>
                         <a href='admin-product-edit.php?id=<?= $row["prod_id"] ?>' class="btn-submit">Edit</a>

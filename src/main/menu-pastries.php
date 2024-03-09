@@ -1,3 +1,14 @@
+<?php
+
+include("../admin/classes/Database.class.php");
+include("../admin/classes/Product.class.php");
+include("../admin/classes/ProductCon.class.php"); 
+
+$product = new ProductController();
+$result = $product->getCatTable("Pastries");
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -16,7 +27,43 @@
         <h1>Pastries</h1>
     </div>
 </section>
-<section class="menu-lay">
+
+<section>
+    <div class="container-fluid new-menu-lay">
+        <div class="row justify-content-center">
+            <div class="container">
+                <div class="row justify-content-around ml-5 mr-5 pl-5 pr-5">
+                    <?php                            
+                            while($row = $result->fetch(PDO::FETCH_ASSOC)){
+                                
+                                $bestseller = $row["bestseller"];
+
+                                echo "
+                                <div class='menu-card'>
+                                    <div class='image-container'>
+                                        <a href='menu-view.php?id=" . $row["prod_id"] . "'>
+                                            <img class='card-img' src='../../assets/uploads/" . $row["prod_image_file"] . "'>
+                                            <div class='overlay overlay--blur'>
+                                                <div class='overlay-content'>"; 
+                                                    echo $bestseller == 'Y' ? '<h4>Bestseller!</h4>' : '';
+                                                    echo "
+                                                    <h2>" . $row["prod_name"] . "</h2>
+                                                    <h3>$" . $row["prod_price"] . "</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                ";
+                            }  
+                    ?>
+                </div>  
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="menu-lay">
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#pastrycinnamonModalCenter">
@@ -97,7 +144,7 @@
             <h3 style="font-size: 20px">(8 pcs)</h3>
         </div>
     </div>
-</section>
+</section> -->
 
 </body>
 
