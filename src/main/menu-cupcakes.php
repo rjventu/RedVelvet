@@ -112,7 +112,7 @@ $result = $product->getCatTable("Cupcakes");
 <?php include('inquiry.php') ?>
 
 <!-- Menu Modal-->
-<div class="modal fade" id="cupcake1ModalCenter" tabindex="-1" role="dialog" aria-labelledby="cupcake1ModalCenterTitle" aria-hidden="true">
+<!-- <div class="modal fade" id="cupcake1ModalCenter" tabindex="-1" role="dialog" aria-labelledby="cupcake1ModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <img src="../../assets/food/car2.jpg">
@@ -132,7 +132,7 @@ $result = $product->getCatTable("Cupcakes");
             <img src="../../assets/food/cupcakes3.jpg">
         </div>
     </div>
-</div>
+</div> -->
 
 </html>
 

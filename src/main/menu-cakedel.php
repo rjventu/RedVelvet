@@ -201,7 +201,7 @@ $result = $product->getCatTable("Cake Delights");
 <?php include('inquiry.php') ?>
 
 <!-- Menu Modal -->
-<div class="modal fade" id="delyemacakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="delyemacakeModalCenterTitle" aria-hidden="true">
+<!-- <div class="modal fade" id="delyemacakeModalCenter" tabindex="-1" role="dialog" aria-labelledby="delyemacakeModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
         <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/del-yemacake.jpg">
@@ -336,7 +336,7 @@ $result = $product->getCatTable("Cake Delights");
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 </html>
 

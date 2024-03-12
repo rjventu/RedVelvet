@@ -29,7 +29,7 @@ $result = $product->getCatTable("Bars");
     <p>12/16 pcs per order/pan</p>
 </section>
 
-<!-- <section>
+<section>
     <div class="container-fluid new-menu-lay">
         <div class="row justify-content-center">
             <div class="container">
@@ -62,9 +62,9 @@ $result = $product->getCatTable("Bars");
             </div>
         </div>
     </div>
-</section> -->
+</section>
 
-<section class="menu-lay">
+<!-- <section class="menu-lay">
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#bardoublechocoModalCenter">
@@ -173,7 +173,7 @@ $result = $product->getCatTable("Bars");
             <h3>$12</h3>
         </div>
     </div>
-</section>
+</section> -->
 
 </body>
 
@@ -184,7 +184,7 @@ $result = $product->getCatTable("Bars");
 <?php include('inquiry.php') ?>
 
 <!--Menu Modal-->
-<div class="modal fade" id="bardoublechocoModalCenter" tabindex="-1" role="dialog" aria-labelledby="bardoublechocoModalCenterTitle" aria-hidden="true">
+<!-- <div class="modal fade" id="bardoublechocoModalCenter" tabindex="-1" role="dialog" aria-labelledby="bardoublechocoModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
         <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/bars-doublechoco.jpg">
@@ -300,7 +300,7 @@ $result = $product->getCatTable("Bars");
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 </html>
 

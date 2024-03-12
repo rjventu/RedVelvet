@@ -155,7 +155,7 @@ $result = $product->getCatTable("Pastries");
 <?php include('inquiry.php') ?>
 
 <!-- Menu Modal -->
-<div class="modal fade" id="pastrycinnamonModalCenter" tabindex="-1" role="dialog" aria-labelledby="pastrycinnamonModalCenterTitle" aria-hidden="true">
+<!-- <div class="modal fade" id="pastrycinnamonModalCenter" tabindex="-1" role="dialog" aria-labelledby="pastrycinnamonModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
         <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/pastry-cinnamon.jpg">
@@ -236,7 +236,7 @@ $result = $product->getCatTable("Pastries");
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 </html>
 

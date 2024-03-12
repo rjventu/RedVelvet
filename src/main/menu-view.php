@@ -69,7 +69,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
             <br/>
 
             <!-- add to cart form -->
-            <form action="cart-add.php" method="post" enctype="multipart/form-data">
+            <form action="order.php" method="post" enctype="multipart/form-data">
               
               <?php
                 if ($cat_name == "Cupcakes"){
