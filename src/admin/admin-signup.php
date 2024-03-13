@@ -34,7 +34,7 @@ else
 <html lang="en">
 
 <!-- Head -->
-<?php include("..\static\head-tags.php")?>
+<?php include("..\main\head-tags.php")?>
   <title>Red Velvet KH - Admin Signup</title>
 </head>
   

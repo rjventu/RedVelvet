@@ -1,3 +1,14 @@
+<?php
+
+include("../admin/classes/Database.class.php");
+include("../admin/classes/Product.class.php");
+include("../admin/classes/ProductCon.class.php"); 
+
+$product = new ProductController();
+$result = $product->getTable();
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -13,11 +24,47 @@
 
 <section class="menu-banner">
     <div>
-        <h1>Check out our menu!</h1>
+        <h1>Menu</h1>
     </div>
     <p>Please pre-order at least 2 days in advance.</p>
 </section>
-<section class="menu-lay">
+
+<section>
+    <div class="container-fluid new-menu-lay">
+        <div class="row justify-content-center">
+            <div class="container">
+                <div class="row justify-content-left">
+                    <?php                            
+                            while($row = $result->fetch(PDO::FETCH_ASSOC)){
+                                echo 
+                                "
+                                <div class='menu-card' style='margin-left: 0.9rem; margin-right: 0.9rem;'>
+                                    <div class='image-container'>
+                                        <a href='menu-sigcakes.php'>
+                                            <img class='card-img' src='../../assets/uploads/" . $row["prod_image_file"] . "'>
+                                            <div class='overlay overlay--blur'>
+                                                <div class='overlay-content'>
+                                                    <h2>" . $row["prod_name"] . "</h2>
+                                                    <h3>" . $row["prod_price"] . "</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class='card-desc'>
+                                        <h2>Signature Cakes</h2>
+                                    </div>
+                                </div>
+                                ";
+                            }  
+                    ?>
+                </div>  
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- <section class="menu-lay">
     <div class="menu-card">
         <div class="image-container">
             <a href="menu-sigcakes.php">
@@ -123,7 +170,7 @@
             <h2>Bars</h2>
         </div>
     </div>
-</section>
+</section> -->
 
 </body>
 

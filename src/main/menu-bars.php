@@ -1,3 +1,14 @@
+<?php
+
+include("../admin/classes/Database.class.php");
+include("../admin/classes/Product.class.php");
+include("../admin/classes/ProductCon.class.php"); 
+
+$product = new ProductController();
+$result = $product->getCatTable("Bars");
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -17,7 +28,43 @@
     </div>
     <p>12/16 pcs per order/pan</p>
 </section>
-<section class="menu-lay">
+
+<section>
+    <div class="container-fluid new-menu-lay">
+        <div class="row justify-content-center">
+            <div class="container">
+                <div class="row justify-content-around ml-5 mr-5 pl-5 pr-5">
+                    <?php                            
+                            while($row = $result->fetch(PDO::FETCH_ASSOC)){
+                                
+                                $bestseller = $row["bestseller"];
+
+                                echo "
+                                <div class='menu-card'>
+                                    <div class='image-container'>
+                                        <a href='menu-view.php?id=" . $row["prod_id"] . "'>
+                                            <img class='card-img' src='../../assets/uploads/" . $row["prod_image_file"] . "'>
+                                            <div class='overlay overlay--blur'>
+                                                <div class='overlay-content'>"; 
+                                                    echo $bestseller == 'Y' ? '<h4>Bestseller!</h4>' : '';
+                                                    echo "
+                                                    <h2>" . $row["prod_name"] . "</h2>
+                                                    <h3>$" . $row["prod_price"] . "</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                ";
+                            }  
+                    ?>
+                </div>  
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="menu-lay">
     <div class="menu-card">
         <div class="image-container">
             <a data-toggle="modal" data-target="#bardoublechocoModalCenter">
@@ -126,7 +173,7 @@
             <h3>$12</h3>
         </div>
     </div>
-</section>
+</section> -->
 
 </body>
 
@@ -137,7 +184,7 @@
 <?php include('inquiry.php') ?>
 
 <!--Menu Modal-->
-<div class="modal fade" id="bardoublechocoModalCenter" tabindex="-1" role="dialog" aria-labelledby="bardoublechocoModalCenterTitle" aria-hidden="true">
+<!-- <div class="modal fade" id="bardoublechocoModalCenter" tabindex="-1" role="dialog" aria-labelledby="bardoublechocoModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog mw-100 w-50 modal-dialog-centered" role="document">
         <div class="modal-content d-flex flex-row" id="menu-modal">
             <img src="../../assets/food/bars-doublechoco.jpg">
@@ -253,7 +300,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 </html>
 

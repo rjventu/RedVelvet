@@ -44,6 +44,7 @@ else
     $prod_name = $_POST["prod_name"];
     $prod_price = $_POST["prod_price"];
     $prod_description = $_POST["prod_description"];
+    $bestseller = $_POST["bestseller"];
     $cat_name = $_POST["cat_name"];
 
     // gets values for file input
@@ -56,7 +57,7 @@ else
     list($prod_image, $prod_image_file, $fileDestination, $error_msg) = prepareFile($fileName, $fileTmpName, $fileSize, $fileError);
 
     if(empty($error_msg)){
-      $product = new ProductController(null, $prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $cat_name);
+      $product = new ProductController(null, $prod_name, $prod_price, $prod_description, $prod_image, $prod_image_file, $bestseller, $cat_name);
       $error_msg = $product->addProduct();
   
       if(empty($error_msg)){
@@ -73,7 +74,7 @@ else
 <html lang="en">
 
 <!-- Head -->
-<?php include("..\static\head-tags.php")?>
+<?php include("..\main\head-tags.php")?>
   <title>Red Velvet KH - Add Product</title>
 </head>
   
@@ -111,12 +112,21 @@ else
         <form class="container product-add-form" action="admin-product-add.php" method="post" enctype="multipart/form-data">
           <div class="row">
             <div class="col">
-              
               <div class="form-group mb-5">
                 <div class="form-label">Product Name*</div>
                 <input type="text" id="prod_name" name="prod_name" placeholder="Choco Chip" required>
+            </div>
+            </div>
+            <div class="col">
+              <div class="form-group mb-5">
+                <div class="form-label">Price*</div>
+                <input type="number" id="prod_price" name="prod_price" min="0" max="100" step="0.01" placeholder="1.00" required>
               </div>
+            </div>
+          </div>
 
+          <div class="row">
+            <div class="col">
               <div class="form-group mb-5">
                 <div class="form-label">Category*</div>
                 <select class="custom-select" name="cat_name" id="cat_name" required>
@@ -130,34 +140,37 @@ else
                   <option value="Bars">Bars</option>
                 </select>
               </div>
-
             </div>
-
             <div class="col">
-
-              <div class="form-group mb-5">
-                <div class="form-label">Price*</div>
-                <input type="number" id="prod_price" name="prod_price" min="0" max="100" step="0.01" placeholder="1.00" required>
-              </div>
-
               <div class="form-group mb-5">
                 <div class="form-label">Image*</div>
                 <div class="input-group">
                   <input type="file" class="upload-image w-100" id="prod_image" name="prod_image" data-browse-on-zone-click="true" data-show-preview="true" required>
                 </div>
               </div>
-
             </div>
-            
           </div>
+
           <div class="row">
             <div class="col">
 
-              <div class="form-group mb-5">
+              <div class="form-group mb-4">
                 <div class="form-label">Description</div>
                 <textarea class="form-control" id="prod_description" name="prod_description" rows="3" placeholder="Type your description here"></textarea>
               </div>
 
+              <div class="form-group mb-4">
+                <div class="form-label">Is this product a Bestseller?</div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="bestsellerR1" name="bestseller" class="custom-control-input" value="Y" required>
+                  <label class="custom-control-label" for="bestsellerR1">Yes</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="bestsellerR2" name="bestseller" class="custom-control-input" value="N">
+                  <label class="custom-control-label" for="bestsellerR2">No</label>
+                </div>
+              </div>
+                
               <div class="form-group">
                 <div class="row d-flex justify-content-center">
                   <input type="submit" name="submit" value="ADD PRODUCT" class="btn px-3 py-1" style="width:auto">
@@ -170,6 +183,7 @@ else
 
             </div>
           </div>
+
         </form>
       </div>
     </div>

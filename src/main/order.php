@@ -48,7 +48,7 @@
             </tr>
         </table>
         <div class="rc-links">
-          <a href="menu.php">Go back</a>
+          <a href="javascript:history.go(-1)">Go back</a>
           <a class="btn" href="checkout.php">Checkout</a>
         </div>
     </div>
