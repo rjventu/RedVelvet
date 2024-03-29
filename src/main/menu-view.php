@@ -1,40 +1,30 @@
 <?php
 
-$success_msg = $error_msg = "";
-
 include("../admin/classes/Database.class.php");
 include("../admin/classes/Product.class.php");
 include("../admin/classes/ProductCon.class.php"); 
 
 if($_SERVER['REQUEST_METHOD'] == 'GET')
-  {
-
-    if (!isset($_GET["id"])){
-      header('location: index.php');
-      exit();
-    }
-
-    //get record details from database
-    $prod_id = $_GET["id"];
-    $product = new ProductController();
-    $result = $product->getRecord($prod_id);
-    $row = $result->fetch(PDO::FETCH_ASSOC);
-
-    $prod_name = $row["prod_name"];
-    $prod_price = $row["prod_price"];
-    $prod_description = $row["prod_description"];
-    $prod_image_file = $row["prod_image_file"];
-    $bestseller = $row["bestseller"];
-    $cat_name = $product->getCatName($row["cat_id"]);
+{
+  if (!isset($_GET["id"])){
+    header('location: index.php');
+    exit();
   }
-  else
-  {
-    $success_msg = $error_msg = "";
+  
+  //get record details from database
+  $prod_id = $_GET["id"];
+  $product = new ProductController();
+  $result = $product->getRecord($prod_id);
+  $row = $result->fetch(PDO::FETCH_ASSOC);
 
-    // gets values from form
-    
-  }
-
+  $prod_name = $row["prod_name"];
+  $prod_price = $row["prod_price"];
+  $prod_description = $row["prod_description"];
+  $prod_image_file = $row["prod_image_file"];
+  $bestseller = $row["bestseller"];
+  $cat_name = $product->getCatName($row["cat_id"]);
+  $others = null;
+}
 ?>
 
 <!doctype html>
@@ -80,13 +70,13 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
                       <?php 
                       if ($prod_name == "Cupcakes w/ Yema Custard Frosting"){
                         ?>
-                        <option value="Yema">Yema</option>
+                        <option value="Yema Base">Yema</option>
                         <?php
                       }else{
                         ?>
-                        <option value="Vanilla">Vanilla</option>
-                        <option value="Chocolate">Chocolate</option>
-                        <option value="Red Velvet">Red Velvet</option>
+                        <option value="Vanilla Base">Vanilla</option>
+                        <option value="Chocolate Base">Chocolate</option>
+                        <option value="Red Velvet Base">Red Velvet</option>
                         <?php
                       }
                       ?>
@@ -97,29 +87,6 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
                       <h3 style="font-style: normal; font-weight: var(--fweight-heading);">
                       $<?=$prod_price?></h3>
                     </div>
-                    <div class="col d-inline-flex justify-content-end">
-                      <input type="submit" name="submit" value="+ CART" class="btn px-3 py-1" style="width:auto">
-                    </div>
-                  </div>
-                  <?php
-                }elseif ($cat_name == "Cheesecakes"){
-                  ?>
-                  <div class="form-group mb-4">
-                    <div class="form-label mb-0">Choose size</div>
-                    <select class="custom-select" name="others" id="others" required>
-                      <option value="15">6 inches ($15.00)</option>
-                      <option value="8">8 inches ($25.00)</option>
-                    </select>
-                  </div>
-                  <div class="row">
-                    <div class="col d-flex align-items-center">
-                      <h3 style="font-style: normal; font-weight: var(--fweight-heading);">
-                      $<?=(int)$prod_price?> / $25</h3>
-                    </div>
-                    <div class="col d-flex justify-content-end">
-                      <input type="submit" name="submit" value="+ CART" class="btn px-3 py-1" style="width:auto">
-                    </div>
-                  </div>
                   <?php
                 }else{
                   ?>
@@ -128,13 +95,14 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
                       <h3 style="font-style: normal; font-weight: var(--fweight-heading);">
                       $<?=$prod_price?></h3>
                     </div>
-                    <div class="col d-flex justify-content-end">
-                      <input type="submit" name="submit" value="+ CART" class="btn px-3 py-1" style="width:auto">
-                    </div>
-                  </div>
                   <?php
                 }
               ?>
+                <div class="col d-flex justify-content-end">
+                  <input type="number" name="prod_id" value="<?php echo $prod_id?>" readonly hidden>
+                  <input type="submit" name="submit" value="+ CART" class="btn px-3 py-1" style="width:auto">
+                </div>
+              </div>
             </form>
           
           </div>
@@ -158,6 +126,41 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
 <!-- Inquiry Button -->
 <?php include('inquiry.php') ?>
 
+<!-- <script>
+
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+let id = Number(<?php echo json_encode($prod_id, JSON_HEX_TAG); ?>);
+let prod_name = <?php echo json_encode($prod_name, JSON_HEX_TAG); ?>;
+let prod_price = parseFloat(<?php echo json_encode($prod_price, JSON_HEX_TAG); ?>);
+let others = <?php echo json_encode($others, JSON_HEX_TAG); ?>;
+
+function addToCart() {
+  increment(id, others);
+}
+
+let increment = (id, others) => {
+  let selectedItem = id;
+  let selectedItemVariety = others;
+  let search = basket.find((x) => x.id === selectedItem && x.variety === selectedItemVariety);
+
+  if (search === undefined) {
+    basket.push({
+      id: selectedItem,
+      name: prod_name,
+      price: prod_price,
+      variety: others,
+      item: 1,
+    });
+  } else {
+    search.item += 1;
+  }
+
+  console.log(basket);
+  localStorage.setItem("data", JSON.stringify(basket));
+};
+
+</script> -->
 
 </html>
 

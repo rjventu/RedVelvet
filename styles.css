@@ -519,6 +519,33 @@ section h6 {
     padding-left: 1rem;
 }
 
+/* new additions */
+
+.receipt-table {
+    border-bottom:0px !important;
+}
+
+.receipt-table th, 
+.receipt-table td {
+    border: 1px !important;
+}
+
+.receipt-fixed-table-container {
+    border:0px !important;
+}
+
+.checkout-container{
+    background-color: var(--col1);
+    width: 50%;
+}
+
+.checkout-container h2{
+    font-size: 50px;
+}
+
+.rc-table-title th{
+    font-weight: normal; 
+}
 
 /* [5] MENU BANNER */
 .menu-banner {
