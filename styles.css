@@ -519,6 +519,50 @@ section h6 {
     padding-left: 1rem;
 }
 
+/* new additions */
+
+.rc-container{
+    background-color: var(--col1);
+    width: 40%;
+}
+
+.rc-container h2{
+    font-size: 50px;
+}
+
+.rc-table-item div:nth-child(1){
+    font-weight: bold;
+}
+
+.rc-table-item div:nth-child(3){
+    font-style: italic;
+    text-align: end;
+}
+
+.rc-table-title div{
+    font-size: 13px;
+    color: var(--link-col);
+}
+
+.rc-table hr{
+    border-color: black;
+    margin-block: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.rc-table-foot{
+    font-size: 20px;
+    font-weight: var(--fweight-heading);
+    font-style: normal !important;
+}
+
+.empty-cart-message h3{
+    color: var(--link-col);
+    font-size: 20px;
+    text-align: center;
+}
+
 
 /* [5] MENU BANNER */
 .menu-banner {

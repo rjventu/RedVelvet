@@ -53,7 +53,7 @@ class ProductController extends Product{
 
   public function editProductNoImg(){
     if($this->invalidName()){
-      return "Error: Invalid name! Valid characters include A-Z and a-z.";
+      return "Error: Invalid name! Valid characters include a-z A-Z 0-9 \" ()";
     }
     return $this->updateProductNoImg($this->prod_name, $this->prod_price, $this->prod_description, $this->bestseller, $this->cat_name, $this->prod_id);
   
@@ -78,7 +78,7 @@ class ProductController extends Product{
   }
 
   private function invalidName(){
-    if(!preg_match("/[a-zA-Z]$/",$this->prod_name)){
+    if(!preg_match("/[a-zA-Z0-9 \"()-]$/",$this->prod_name)){
       return true;
     }else{
       return false;
