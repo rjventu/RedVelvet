@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
 <!-- Product Description -->
 <section>
   <div class="container product-description-container">
-    <div class="row m-5">
+    <div class="row m-5 d-flex">
       <div class="col-md-6 m-0 pl-5 pt-5 pb-5 pr-0">
         <img src="../../assets/uploads/<?=$prod_image_file?>" alt="Product Image" width="100%" height="500px" style="object-fit: cover">
       </div>
@@ -59,7 +59,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
             <br/>
 
             <!-- add to cart form -->
-            <form action="order.php" method="post" enctype="multipart/form-data">
+            <form action="order-add.php" method="post" enctype="multipart/form-data">
               
               <?php
                 if ($cat_name == "Cupcakes"){
@@ -125,42 +125,6 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
 
 <!-- Inquiry Button -->
 <?php include('inquiry.php') ?>
-
-<!-- <script>
-
-let basket = JSON.parse(localStorage.getItem("data")) || [];
-
-let id = Number(<?php echo json_encode($prod_id, JSON_HEX_TAG); ?>);
-let prod_name = <?php echo json_encode($prod_name, JSON_HEX_TAG); ?>;
-let prod_price = parseFloat(<?php echo json_encode($prod_price, JSON_HEX_TAG); ?>);
-let others = <?php echo json_encode($others, JSON_HEX_TAG); ?>;
-
-function addToCart() {
-  increment(id, others);
-}
-
-let increment = (id, others) => {
-  let selectedItem = id;
-  let selectedItemVariety = others;
-  let search = basket.find((x) => x.id === selectedItem && x.variety === selectedItemVariety);
-
-  if (search === undefined) {
-    basket.push({
-      id: selectedItem,
-      name: prod_name,
-      price: prod_price,
-      variety: others,
-      item: 1,
-    });
-  } else {
-    search.item += 1;
-  }
-
-  console.log(basket);
-  localStorage.setItem("data", JSON.stringify(basket));
-};
-
-</script> -->
 
 </html>
 
