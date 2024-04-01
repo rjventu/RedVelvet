@@ -33,28 +33,8 @@ else
 <?php include("admin-header.php")?>
 
 
-<section class="admin-panel-wrapper container">
-  <div class="row my-5">
-    <div class="col admin-sidebar" style="">
-      <div class="row">
-        <div class="col d-flex justify-content-center">
-          <img src="../../assets/logoA.png" alt="RedVelvetKH Logo" class="img-fluid">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h2 class="text-center">
-              Admin <?php echo $_SESSION['adminfname']?>
-          </h3>
-        </div>
-      </div>
-      <div class="row d-flex justify-content-center my-4">
-          <a class="btn" href="admin-signup.php">Create new Admin</a></br>
-      </div>
-      <div class="row d-flex justify-content-center my-4">
-          <a class="btn" href="admin-logout.php">Logout</a>
-      </div>
-    </div>
+<!-- Admin Panel Sidebar -->
+<?php include("admin-sidebar.php")?>
     <div class="col-md-9 content">
       <div class="row mb-4">
         <div class="col">
