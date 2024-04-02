@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2024 at 02:22 PM
+-- Generation Time: Apr 01, 2024 at 05:52 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -70,6 +70,38 @@ INSERT INTO `category` (`cat_id`, `cat_name`, `cat_description`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `order_id` int(255) NOT NULL,
+  `order_name` varchar(255) NOT NULL,
+  `order_email` varchar(255) NOT NULL,
+  `order_contact` varchar(24) NOT NULL,
+  `order_add` varchar(255) NOT NULL,
+  `order_date` date NOT NULL,
+  `order_pay` int(6) NOT NULL,
+  `order_time` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders_items`
+--
+
+CREATE TABLE `orders_items` (
+  `item_id` int(11) NOT NULL,
+  `item_name` varchar(50) NOT NULL,
+  `item_price` decimal(5,2) NOT NULL,
+  `item_variety` varchar(255) NOT NULL,
+  `item_qty` int(255) NOT NULL,
+  `order_id` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `product`
 --
 
@@ -91,7 +123,7 @@ CREATE TABLE `product` (
 INSERT INTO `product` (`prod_id`, `prod_name`, `prod_price`, `prod_description`, `prod_image`, `prod_image_file`, `bestseller`, `cat_id`) VALUES
 (1, 'Red Velvet Cream', 20.00, 'Layers of moist red velvet cake paired with velvety cream cheese frosting, creating a symphony of rich flavors and textures.', 'redvelcreamcake.jpg', '65be13c4de1971.13328071.jpg', 'Y', 1),
 (2, 'Yema Cake with Cheese', 14.00, 'Moist sponge cake filled with creamy yema and topped with grated cheese for a perfect balance of flavors.', 'del-yemacake.jpg', '65be13e63d7837.58199304.jpg', 'Y', 2),
-(3, 'Blueberry Cheesecake', 15.00, 'Creamy cheesecake atop a buttery graham cracker crust, adorned with a luscious blueberry compote. A perfect balance of tangy sweetness in every bite.', 'cheese-blueberry.jpg', '65be141dd74f53.44733419.jpg', 'Y', 3),
+(3, 'Blueberry Cheesecake (6\")', 15.00, 'Creamy cheesecake atop a buttery graham cracker crust, adorned with a luscious blueberry compote. A perfect balance of tangy sweetness in every bite.', 'cheese-blueberry.jpg', '65be141dd74f53.44733419.jpg', 'Y', 3),
 (4, 'Classic Cinnamon Rolls with Glaze', 6.00, 'Soft, fluffy rolls swirled with cinnamon sugar, topped with a luscious glaze. A perfect balance of sweetness and spice in every bite.', 'car3.jpg', '65be1466c80e16.61250316.jpg', 'Y', 4),
 (5, 'Black Forest', 20.00, 'Layers of decadent chocolate sponge cake, whipped cream, and cherries, perfectly balanced for a timeless treat.', 'blackforestcake.jpg', '65eb144512b4d3.41354951.jpg', 'Y', 1),
 (6, 'Choco Oreo', 20.00, 'Rich chocolate layers intertwined with crushed Oreo cookies, topped with velvety frosting and Oreo crumbles for an irresistible fusion of flavors.', 'chocooreocake.jpg', '65eb1be362e4f5.78091604.jpg', 'N', 1),
@@ -106,9 +138,9 @@ INSERT INTO `product` (`prod_id`, `prod_name`, `prod_price`, `prod_description`,
 (15, 'Tres Leches with Cashew Nuts', 14.00, 'Each slice of our Tres Leches Cake with Cashew Nuts offers a luxurious blend of moist cake soaked in three milks, topped with crunchy cashew nuts for a perfect balance of richness and texture.', 'treslechescake.jpg', '65eb1e36239b48.06139149.jpg', 'N', 2),
 (16, 'Purple Velvet Cream', 14.00, 'Layers of velvety purple cake, infused with hints of vanilla, and complemented by our signature cream frosting. Pure elegance in every bite.', 'del-purpvelcream.jpg', '65eb1e4f9dc3d0.01338372.jpg', 'N', 2),
 (17, 'Choco Vanilla with Fruits', 14.00, 'Moist chocolate and vanilla layers adorned with a medley of fresh, vibrant fruits. A perfect harmony of indulgence and freshness in every slice.', 'del-chocvanwfruits.jpg', '65eb1e6ab4fb74.26793853.jpg', 'N', 2),
-(18, 'Oreo Cheescake', 15.00, 'Velvety cream cheese filling loaded with chunks of Oreo cookies, nestled on a chocolate cookie crust. Pure indulgence in every mouthful.', 'cheese-oreo.jpg', '65ec1dc4872b05.98811795.jpg', 'Y', 3),
-(19, 'Strawberry Cheesecake', 15.00, 'Creamy cheesecake on a buttery graham cracker crust, crowned with a luscious layer of fresh strawberries. A perfect blend of creamy and fruity flavors.', 'cheese-straw.jpg', '65ec1dd962cdb9.73840755.jpg', 'N', 3),
-(20, 'Classic New York', 14.00, 'A velvety smooth cream cheese filling atop a buttery graham cracker crust. Pure indulgence in every decadent bite.', 'cheese-nyc.jpg', '65ec1e0466e931.47041162.jpg', 'N', 3),
+(18, 'Oreo Cheescake (6\")', 15.00, 'Velvety cream cheese filling loaded with chunks of Oreo cookies, nestled on a chocolate cookie crust. Pure indulgence in every mouthful.', 'cheese-oreo.jpg', '65ec1dc4872b05.98811795.jpg', 'Y', 3),
+(19, 'Strawberry Cheesecake (6\")', 15.00, 'Creamy cheesecake on a buttery graham cracker crust, crowned with a luscious layer of fresh strawberries. A perfect blend of creamy and fruity flavors.', 'cheese-straw.jpg', '65ec1dd962cdb9.73840755.jpg', 'N', 3),
+(20, 'Classic New York (6\")', 14.00, 'A velvety smooth cream cheese filling atop a buttery graham cracker crust. Pure indulgence in every decadent bite.', 'cheese-nyc.jpg', '65ec1e0466e931.47041162.jpg', 'N', 3),
 (21, 'Soft Ensaymada with Cheese', 14.00, 'Pillowy dough infused with butter, topped with creamy butter and grated cheese. A delightful Filipino treat, perfect for any time of day.', 'pastry-ensaymada.jpg', '65ec1f5d3d84e2.90027411.jpg', 'N', 4),
 (22, 'Yema-Filled Donuts', 14.00, 'Fluffy dough filled with creamy yema custard, dusted with powdered sugar. A delightful blend of sweetness and richness in every bite.', 'pastry-yemadonut.jpg', '65ec1f7beb9729.34328690.jpg', 'N', 4),
 (23, 'Old-Fashioned Cheese Donuts', 6.00, 'Classic fluffy dough filled with creamy cheese, perfectly sweetened and fried to golden perfection. A timeless treat for any occasion.', 'pastry-olddonut.jpg', '65ec1fb374f479.84021097.jpg', 'Y', 4),
@@ -124,7 +156,11 @@ INSERT INTO `product` (`prod_id`, `prod_name`, `prod_price`, `prod_description`,
 (33, 'Apple Crumble Pie', 12.00, 'Layers of juicy apple filling sandwiched between a buttery crumble crust, offering a delectable twist on the classic pie in convenient bar form.', 'bars-apple.jpg', '65ec26567f3647.21590981.jpg', 'N', 7),
 (34, 'Cupcakes w/ Vanilla Cream Frosting', 18.00, 'Moist cake topped with a generous swirl of creamy vanilla frosting. A perfect balance of sweetness and fluffy texture in every bite.', 'cupcakes2.jpg', '65ec3af10ad956.87193045.jpg', 'N', 5),
 (35, 'Cupcakes w/ Cream Cheese Frosting', 21.00, 'Moist cake topped with a decadent swirl of creamy cream cheese frosting. A delightful blend of richness and tanginess in every bite.\r\n', 'car2.jpg', '65ec3b103a2186.70219066.jpg', 'N', 5),
-(36, 'Cupcakes w/ Yema Custard Frosting', 21.00, 'Moist cake crowned with a heavenly swirl of creamy yema custard frosting. A delightful fusion of sweetness and indulgence in every bite.', 'cupcakes3.jpg', '65ec3b44c0ebc3.06507840.jpg', 'N', 5);
+(36, 'Cupcakes w/ Yema Custard Frosting', 21.00, 'Moist cake crowned with a heavenly swirl of creamy yema custard frosting. A delightful fusion of sweetness and indulgence in every bite.', 'cupcakes3.jpg', '65ec3b44c0ebc3.06507840.jpg', 'N', 5),
+(38, 'Blueberry Cheesecake (8\")', 25.00, 'Creamy cheesecake atop a buttery graham cracker crust, adorned with a luscious blueberry compote. A perfect balance of tangy sweetness in every bite.', 'cheese-blueberry.jpg', '6606c605f092c6.91153735.jpg', 'Y', 3),
+(39, 'Oreo Cheescake (8\")', 25.00, 'Velvety cream cheese filling loaded with chunks of Oreo cookies, nestled on a chocolate cookie crust. Pure indulgence in every mouthful.', 'cheese-oreo.jpg', '6606c6584d5fe5.70965587.jpg', 'Y', 3),
+(40, 'Strawberry Cheesecake (8\")', 25.00, 'Creamy cheesecake on a buttery graham cracker crust, crowned with a luscious layer of fresh strawberries. A perfect blend of creamy and fruity flavors.', 'cheese-straw.jpg', '6606c678d60608.86548823.jpg', 'N', 3),
+(41, 'Classic New York (8\")', 25.00, 'A velvety smooth cream cheese filling atop a buttery graham cracker crust. Pure indulgence in every decadent bite.', 'cheese-nyc.jpg', '6606c69d9bb533.95358814.jpg', 'N', 3);
 
 --
 -- Indexes for dumped tables
@@ -141,6 +177,18 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`cat_id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`order_id`);
+
+--
+-- Indexes for table `orders_items`
+--
+ALTER TABLE `orders_items`
+  ADD KEY `order_id` (`order_id`);
 
 --
 -- Indexes for table `product`
@@ -166,14 +214,26 @@ ALTER TABLE `category`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `orders_items`
+--
+ALTER TABLE `orders_items`
+  ADD CONSTRAINT `orders_items_fk` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`);
 
 --
 -- Constraints for table `product`

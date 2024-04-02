@@ -1,11 +1,12 @@
 let cart = JSON.parse(localStorage.getItem("data")) || [];
-let receiptTable = document.getElementById("rc-table");
-let tableList = document.getElementById("rc-table-list");
-let label = document.getElementById("rc-table-label");
-let emptyLabel = document.getElementById("empty-cart-message");
-let totalTable = document.getElementById("rc-table-total");
-let totalLabel = document.getElementById("total-price");
-let checkoutLabel = document.getElementById("rc-table-checkout");
+
+let receiptTable = document.getElementById("rc-table"),
+    tableList = document.getElementById("rc-table-list"),
+    label = document.getElementById("rc-table-label"),
+    emptyLabel = document.getElementById("empty-cart-message"),
+    totalTable = document.getElementById("rc-table-total"),
+    totalLabel = document.getElementById("total-price"),
+    checkoutLabel = document.getElementById("rc-table-checkout");
 
 function generateCartItems(){
   if (cart.length === 0) {

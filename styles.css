@@ -20,11 +20,13 @@
     CONTACT
         [4G] CONTACTS
     CART/CHECKOUT
-        [4H] CART/CHECKOUT
+        [4H] CART/CHECKOUT       
+        [4I] THANK YOU PAGE
     
     MENU
         [5] MENU BANNER
         [5A] MENU LAY
+        [5B] PRODUCT DESCRIPTION
 
     [6] FOOTER
 
@@ -35,9 +37,7 @@
     [9] LOGIN
 
     [10] ADMIN PANEL
-
-    [11] PRODUCT DESCRIPTION
-
+    
 /* [1] GLOBAL */
 :root {
     /* COLORS */
@@ -523,7 +523,6 @@ section h6 {
 
 .rc-container{
     background-color: var(--col1);
-    width: 40%;
 }
 
 .rc-container h2{
@@ -563,6 +562,15 @@ section h6 {
     text-align: center;
 }
 
+/* [4I] THANK YOU PAGE */
+
+.ty-wrapper h3{
+    font-size: 25px;
+}
+
+.ty-wrapper a{
+    font-size: 20px;
+}
 
 /* [5] MENU BANNER */
 .menu-banner {
@@ -713,6 +721,24 @@ section h6 {
 
 .cupcake-prices {
     text-align: end;
+}
+
+/* [5B] PRODUCT DESCRIPTION */
+
+.product-description-container {
+    background-color: var(--col2);
+}
+
+.product-description-container .row{
+    background-color: var(--col1);
+}
+
+.product-description-container h2{
+    font-size: 48px;
+}
+
+.product-description-container p{
+    font-size: 20px;
 }
 
 /* [6] FOOTER */
@@ -1046,23 +1072,38 @@ input, #date, #payment {
     cursor: default;
 }
 
-/* [11] PRODUCT DESCRIPTION */
-
-.product-description-container {
-    background-color: var(--col2);
+.sticky-top{
+    padding-top: 6rem;
 }
 
-.product-description-container .row{
-    background-color: var(--col1);
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
 }
 
-.product-description-container h2{
-    font-size: 48px;
+
+
+.rc-admin-links a {
+    display: flex;
+    justify-content: start;
+    color:var(--col1);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+ 
+.rc-admin-links a:hover {
+    color: var(--txt-col);
+    text-decoration: none;
+    transition: .3s ease-in-out;
 }
 
-.product-description-container p{
-    font-size: 20px;
-}
+
+
+
+
 
 
 /* mobile */

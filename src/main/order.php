@@ -12,9 +12,9 @@
 <?php include("header.php")?>
 
   <section class="order">
-    <div class="container rc-container p-5 mt-5 mb-5">
+    <div class="order-receipt p-5 mt-5 mb-5">
       <div class="row">
-        <div class="col d-flex justify-content-center mt-4 mb-5" id="rc-table-label">
+        <div class="col d-flex justify-content-center mt-4 mb-3" id="rc-table-label">
           <h2>My Cart</h2>
         </div>
       </div>
@@ -57,7 +57,7 @@
             </div>
           </div>
           <!-- Links -->
-          <div class="rc-links">
+          <div class="rc-links pl-3">
             <a href="javascript:history.go(-1)">Go back</a>
             <a class="btn" href="checkout.php" id="rc-table-checkout">Checkout</a>
           </div>
@@ -74,6 +74,7 @@
 <!-- Inquiry Button -->
 <?php include('inquiry.php') ?>
 
+<!-- JS script -->
 <script src="cart.js"></script>
 
 </html>

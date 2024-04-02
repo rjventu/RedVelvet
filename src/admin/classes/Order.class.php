@@ -28,17 +28,24 @@ class Order extends Database{
     return $stmt;
   }
 
-  protected function createOrder($order_name, $order_email, $order_contact, $order_add, $order_date, $order_pay, $order_time){
+  protected function createOrder($order_name, $order_email, $order_contact, $order_add, $order_date, $order_pay){
 
-    $query = 'INSERT INTO orders (order_name, order_email, order_contact, order_add, order_date, order_pay, order_time) VALUES (?, ?, ?, ?, ?, ?, ?);';
-    $stmt = $this->connect()->prepare($query);
+    $query = '
+    INSERT INTO orders (order_name, order_email, order_contact, order_add, order_date, order_pay) VALUES (?, ?, ?, ?, ?, ?);
+    ';
 
-    if(!$stmt->execute(array($order_name, $order_email, $order_contact, $order_add, $order_date, $order_pay, $order_time))){
+    $dbh = $this->connect();
+    $stmt = $dbh->prepare($query);
+
+    $dbh->beginTransaction();
+    if(!$stmt->execute(array($order_name, $order_email, $order_contact, $order_add, $order_date, $order_pay))){
       $stmt = null;
       return "Error: Statement failed!";
     }
-    $stmt = null;
-    return "";
+    $id = $dbh->lastInsertId();
+    $dbh->commit();
+
+    return $id;
   }
 
 }
