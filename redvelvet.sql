@@ -3,13 +3,13 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2024 at 05:52 PM
+-- Generation Time: Apr 02, 2024 at 06:35 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone = "+07:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `admin_email`, `admin_password`, `admin_fname`, `admin_lname`) VALUES
-(1, 'venturarubyjean@gmail.com', '$2y$10$rmoXzlrAOIgba4oq0Ql6VO.i.XY1NqBCq6k9Ap0Hd0AVEPaQvgYYO', 'Ruby', 'Ventura');
+(1, 'admin@gmail.com', '$2y$10$rmoXzlrAOIgba4oq0Ql6VO.i.XY1NqBCq6k9Ap0Hd0AVEPaQvgYYO', 'Ruby', 'Ventura');
 
 -- --------------------------------------------------------
 
@@ -81,8 +81,24 @@ CREATE TABLE `orders` (
   `order_add` varchar(255) NOT NULL,
   `order_date` date NOT NULL,
   `order_pay` int(6) NOT NULL,
-  `order_time` timestamp NOT NULL DEFAULT current_timestamp()
+  `order_time` timestamp NOT NULL DEFAULT current_timestamp(),
+  `order_status` varchar(255) NOT NULL DEFAULT 'Pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `order_name`, `order_email`, `order_contact`, `order_add`, `order_date`, `order_pay`, `order_time`, `order_status`) VALUES
+(1, 'Mary Sue', 'marysue@gmail.com', '123456789', '1234 Street, District, City', '2024-04-03', 1, '2024-04-01 15:58:25', 'Delivered'),
+(2, 'John Johnson', 'jjohnson@gmail.com', '09221234567', '34 A Johnsville, California', '2024-04-04', 2, '2024-04-02 04:42:06', 'Delivering'),
+(3, 'Tester Testerson', 'test@gmail.com', '00001234567', 'Apt. Suite A, Test St., Test Blvd.', '2024-04-12', 1, '2024-04-02 05:53:46', 'Paid'),
+(4, 'Luna Lovegood', 'luna.lovegood@gmail.com', '963852741', 'Hogwarts', '2024-04-22', 2, '2024-04-02 08:45:22', 'Paid'),
+(5, 'Jane Doe', 'jdoe@gmail.com', '123456789', 'Manila', '2024-04-13', 1, '2024-04-02 14:2:38', 'Paid'),
+(6, 'Kermit the Frog', 'kerms99@gmail.com', '852943761', 'Sesame Street', '2024-04-21', 2, '2024-04-02 14:45:24', 'Pending'),
+(7, 'Jimin', 'jmpark1013@gmail.com', '123654789', 'Hybe Building', '2024-04-26', 2, '2024-04-02 14:46:38', 'Pending'),
+(8, 'Joe Biden', 'jbiden@gmail.com', '842697513', 'The White House', '2024-04-27', 1, '2024-04-02 14:51:34', 'Pending'),
+(9, 'Bruce Wayne', 'brucewayne@gmail.com', '1234567890', 'Gotham', '2024-04-05', 1, '2024-04-02 16:13:31', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -98,6 +114,35 @@ CREATE TABLE `orders_items` (
   `item_qty` int(255) NOT NULL,
   `order_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders_items`
+--
+
+INSERT INTO `orders_items` (`item_id`, `item_name`, `item_price`, `item_variety`, `item_qty`, `order_id`) VALUES
+(1, 'Red Velvet Cream', 20.00, 'none', 1, 1),
+(36, 'Cupcakes w/ Yema Custard Frosting', 21.00, 'Yema Base', 2, 1),
+(7, 'Purple Velvet Cream', 20.00, 'none', 3, 2),
+(18, 'Oreo Cheescake (6\")', 15.00, 'none', 1, 2),
+(5, 'Black Forest', 20.00, 'none', 1, 3),
+(35, 'Cupcakes w/ Cream Cheese Frosting', 21.00, 'Vanilla Base', 1, 3),
+(27, 'Red Velvet Choco Chip', 6.00, 'none', 2, 3),
+(12, 'Red Velvet Cream', 14.00, 'none', 1, 4),
+(9, 'Choco Decadence', 25.00, 'none', 1, 4),
+(35, 'Cupcakes w/ Cream Cheese Frosting', 21.00, 'Vanilla Base', 2, 4),
+(24, 'Double Choco', 6.00, 'none', 2, 4),
+(1, 'Red Velvet Cream', 20.00, 'none', 1, 5),
+(29, 'Red Velvet Cheesecake Swirl', 12.00, 'none', 1, 5),
+(28, 'Double Choco Brownies', 8.00, 'none', 1, 5),
+(34, 'Cupcakes w/ Vanilla Cream Frosting', 18.00, 'Vanilla Base', 1, 6),
+(35, 'Cupcakes w/ Cream Cheese Frosting', 21.00, 'Chocolate Base', 1, 6),
+(18, 'Oreo Cheescake (6\")', 15.00, 'none', 1, 7),
+(36, 'Cupcakes w/ Yema Custard Frosting', 21.00, 'Yema Base', 1, 7),
+(36, 'Cupcakes w/ Yema Custard Frosting', 21.00, 'Yema Base', 1, 8),
+(30, 'Butterscotch with Nuts', 8.00, 'none', 1, 8),
+(31, 'Revel Choco-Oat Bars', 12.00, 'none', 1, 8),
+(35, 'Cupcakes w/ Cream Cheese Frosting', 21.00, 'Vanilla Base', 2, 9),
+(36, 'Cupcakes w/ Yema Custard Frosting', 21.00, 'Yema Base', 1, 9);
 
 -- --------------------------------------------------------
 
@@ -205,7 +250,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -217,7 +262,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `product`
