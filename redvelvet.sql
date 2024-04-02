@@ -9,8 +9,7 @@
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+07:00";
-
+SET time_zone = "+00:00";
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -100,6 +99,7 @@ INSERT INTO `orders` (`order_id`, `order_name`, `order_email`, `order_contact`, 
 (8, 'Joe Biden', 'jbiden@gmail.com', '842697513', 'The White House', '2024-04-27', 1, '2024-04-02 14:51:34', 'Pending'),
 (9, 'Bruce Wayne', 'brucewayne@gmail.com', '1234567890', 'Gotham', '2024-04-05', 1, '2024-04-02 16:13:31', 'Pending');
 
+SET GLOBAL time_zone = '+7:00';
 -- --------------------------------------------------------
 
 --
