@@ -1,13 +1,4 @@
-<?php
-
-include("../admin/classes/Database.class.php");
-include("../admin/classes/Product.class.php");
-include("../admin/classes/ProductCon.class.php"); 
-
-$product = new ProductController();
-$result = $product->getCatTable("Cupcakes");
-
-?>
+<?php $current_cat = "Cupcakes"; include("includes/menu-cat.inc.php");?>
 
 <!doctype html>
 <html lang="en">
@@ -84,55 +75,10 @@ $result = $product->getCatTable("Cupcakes");
     </div>
 </section>
 
-<!-- <section class="menu-lay">
-    <div class="image-container-cupcakes">
-        <a data-toggle="modal" data-target="#cupcake1ModalCenter">
-            <img class="card-img" src="../../assets/food/car2.jpg">
-        </a>
-    </div>
-    <div class="image-container-cupcakes">
-        <a data-toggle="modal" data-target="#cupcake2ModalCenter">
-            <img class="card-img" src="../../assets/food/cupcakes2.jpg">
-        </a>
-    </div>
-    <div class="image-container-cupcakes">
-        <a data-toggle="modal" data-target="#cupcake3ModalCenter">
-            <img class="card-img" src="../../assets/food/cupcakes3.jpg">
-        </a>
-    </div>
-</section> -->
-
-
 </body>
 
 <!-- Footer -->
 <?php include('footer.php') ?>
-
-<!-- Inquiry Button -->
-<?php include('inquiry.php') ?>
-
-<!-- Menu Modal-->
-<!-- <div class="modal fade" id="cupcake1ModalCenter" tabindex="-1" role="dialog" aria-labelledby="cupcake1ModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <img src="../../assets/food/car2.jpg">
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="cupcake2ModalCenter" tabindex="-1" role="dialog" aria-labelledby="cupcake2ModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <img src="../../assets/food/cupcakes2.jpg">
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="cupcake3ModalCenter" tabindex="-1" role="dialog" aria-labelledby="cupcake3ModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <img src="../../assets/food/cupcakes3.jpg">
-        </div>
-    </div>
-</div> -->
 
 </html>
 

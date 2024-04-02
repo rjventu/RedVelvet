@@ -143,8 +143,5 @@
 <!-- Footer -->
 <?php include('footer.php') ?>
 
-<!-- Inquiry Button -->
-<?php include('inquiry.php') ?>
-
 </html>
 
