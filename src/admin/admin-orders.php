@@ -41,22 +41,20 @@ else
           <h2>Orders</h2>
         </div>
       </div>
-      <div class="row product-listing-table mx-1">
+      <div class="row product-listing-table mx-1 p-4">
         <div class="col">
-          <table class="table">
+          <table class="table" id="admin-orders-table">
             <thead>
               <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
-                <th scope="col">Contact</th>
-                <th scope="col">Address</th>
                 <th scope="col">Date</th>
-                <th scope="col">Payment</th>
+                <th scope="col">Status</th>
+                <th scope="col">View</th>
               </tr>
             </thead>
             <tbody>
-              
               <?php
                 while($row = $result->fetch(PDO::FETCH_ASSOC)){
                   echo 
@@ -64,24 +62,29 @@ else
                     <td>" . $row["order_id"] . "</td>
                     <td>" . $row["order_name"] . "</td>
                     <td>" . $row["order_email"] . "</td>
-                    <td>" . $row["order_contact"] . "</td>
-                    <td>" . $row["order_add"] . "</td>
                     <td>" . $row["order_date"] . "</td>
-                    <td>" ; echo ($row["order_pay"] == 1) ? "ABA Pay" : "Cash"; echo "</td>
+                    <td>" . $row["order_status"] . "</td>
+                    <td class='rc-links pt-2'>"?>
+                      <a href='admin-orders-view.php?id=<?= $row["order_id"] ?>'><i class='bi bi-eye-fill'></i></a>
+                    <?php "</td>
                     </tr>";
                 }
               ?>
-              
             </tbody>
           </table>
         </div>
-        
       </div>
     </div>
   </div>
 </section>
 
 </body>
+
+<script>
+  $(document).ready(function() {
+    $('#admin-orders-table').DataTable();
+  });
+</script>
 
 </html>
 

@@ -13,3 +13,8 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="..\..\styles.css">
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.jpg">
+    
+    <!-- DataTables -->
+    <link href=https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/css/dataTables.bootstrap4.min.css rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/jquery.dataTables.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/dataTables.bootstrap4.min.js></script>

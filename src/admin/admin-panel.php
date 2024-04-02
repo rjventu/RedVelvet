@@ -111,9 +111,9 @@ else
           <a class="btn-submit" href="admin-product-add.php" id="add-product-btn">Add New Product</a>
         </div>
       </div>
-      <div class="row product-listing-table mx-1">
+      <div class="row product-listing-table mx-1 p-4">
         <div class="col">
-          <table class="table">
+          <table class="table" id="admin-panel-table">
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -121,7 +121,7 @@ else
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
                 <th scope="col">Description</th>
-                <th scope="col" style="width:20%">Action</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -135,7 +135,7 @@ else
                     <td>" . $row["prod_name"] . "</td>
                     <td>" . $row["prod_price"] . "</td>
                     <td>" . $row["prod_description"] . "</td>
-                    <td>"?>
+                    <td class='d-flex flex-column text-center'>"?>
                         <a href='admin-product-edit.php?id=<?= $row["prod_id"] ?>' class="btn-submit">Edit</a>
                         <a href='admin-panel.php?id=<?= $row["prod_id"] ?>' class="btn-submit"
                           onclick="return confirm('Are you sure you want to delete this record?');"
@@ -155,6 +155,12 @@ else
 </section>
 
 </body>
+
+<script>
+  $(document).ready(function() {
+    $('#admin-panel-table').DataTable();
+  });
+</script>
 
 </html>
 

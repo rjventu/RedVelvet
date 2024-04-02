@@ -48,4 +48,15 @@ class Order extends Database{
     return $id;
   }
 
+  protected function updateOrder($order_date, $order_pay, $order_status, $order_id){
+    
+    $query = 'UPDATE orders SET order_date = ?, order_pay = ?, order_status = ? WHERE order_id = ?;';
+
+    $stmt = $this->connect()->prepare($query);
+
+    if(!$stmt->execute(array($order_date, $order_pay, $order_status, $order_id))){
+      $stmt = null;
+      return "Error: Statement failed!";
+    }
+  }
 }

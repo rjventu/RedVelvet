@@ -9,6 +9,7 @@ class OrderController extends Order{
   private $order_date;
   private $order_pay;
   private $order_time;
+  private $order_status;
   
   public function __construct($order_id=null, $order_name=null, $order_email=null, $order_contact=null, $order_add=null, $order_date=null, $order_pay=null){
     $this->order_id = $order_id;
@@ -32,5 +33,14 @@ class OrderController extends Order{
 
   public function addOrder(){
     return $this->createOrder($this->order_name, $this->order_email, $this->order_contact, $this->order_add, $this->order_date, $this->order_pay);
+  
+  }
+  public function setStatus($order_status){
+    $this->order_status = $order_status;
+  
+  }
+
+  public function editOrder(){
+    return $this->updateOrder($this->order_date, $this->order_pay, $this->order_status, $this->order_id);
   }
 }

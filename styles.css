@@ -45,6 +45,7 @@
     --col2: #D0051B;
     --txt-col: #000000;
     --link-col: #A6A6A6;
+    --link-col-2: #848484;
 
     /* TYPOGRAPHY */
     --font-link: Lekton ; /* lekton */
@@ -836,6 +837,10 @@ input, #date, #payment {
     background-color: var(--col1);
 }
 
+.disabled-input{
+    border-bottom: none;
+}
+
 .inq-form .btn {
     margin-inline: 7rem;
     border: var(--col2) 1px solid;
@@ -1100,9 +1105,12 @@ input, #date, #payment {
     transition: .3s ease-in-out;
 }
 
-
-
-
+.admin-order-label{
+    font-size: 16px; 
+    color:var(--txt-col);
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
 
 

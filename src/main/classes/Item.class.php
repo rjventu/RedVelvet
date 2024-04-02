@@ -5,7 +5,7 @@ class Item extends Database{
     $query = 'SELECT * FROM orders_items WHERE order_id = ?;';
     $stmt = $this->connect()->prepare($query);
 
-    if(!$stmt->execute($order_id)){
+    if(!$stmt->execute(array($order_id))){
       $stmt = null;
       header("location: ../index.php?error=stmtfailed");
       exit();
