@@ -435,16 +435,6 @@ section h6 {
     padding-bottom: 2rem;
 }   
 
-.receipt-table {
-    overflow-x: scroll;
-    width: 100%;
-    font-family: var(--font-main);
-}
-
-.receipt-table td, tr {
-    padding-block: 0.4rem;
-}
-
 .rc-table-title {
     color: var(--link-col);
     font-size: 14px;
@@ -470,25 +460,6 @@ section h6 {
 
 .rc-table-title td:nth-child(3) {
     font-style: normal !important;
-}
-
-.receipt-table td:nth-child(1) {
-    text-align: left;
-    font-weight: var(--fweight-heading);
-}
-  
-.receipt-table td:nth-child(2) {
-    text-align: center;
-}
-
-.receipt-table td:nth-child(3) {
-    text-align: right;
-    font-style: italic;
-}
-
-.receipt-table hr {
-    border-color: black;
-    margin-block: 5px;
 }
 
 .rc-table-total {
@@ -521,14 +492,6 @@ section h6 {
 }
 
 /* new additions */
-
-.rc-container{
-    background-color: var(--col1);
-}
-
-.rc-container h2{
-    font-size: 50px;
-}
 
 .rc-table-item div:nth-child(1){
     font-weight: bold;
@@ -783,15 +746,15 @@ footer a:hover {
 
 /* [7] INQUIRY */
 .inquiry-btn {
-    z-index: 3;
+    /* z-index: 3; */
     background-color: var(--col2);
     border: 3px solid var(--col1);
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    position: fixed;
-    bottom: 5rem;
-    right: 5rem;
+    /* position: fixed; */
+    /* bottom: 5rem;
+    right: 5rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1088,8 +1051,6 @@ input, #date, #payment {
     display: none;
 }
 
-
-
 .rc-admin-links a {
     display: flex;
     justify-content: start;
@@ -1112,7 +1073,9 @@ input, #date, #payment {
     margin-bottom: 2rem;
 }
 
-
+.mobile-msg-wrapper{
+    display: none;
+}
 
 /* mobile */
 @media (max-width: 1100px) {
@@ -1124,6 +1087,18 @@ input, #date, #payment {
 @media (max-width: 1300px) {
     .order-receipt {
         margin-inline: 20%;
+    }
+
+    .admin-panel-wrapper{
+        display:none;
+    }
+
+    .mobile-msg-wrapper{
+        display: block;
+    }
+    
+    .mobile-msg{
+        background-color: #FFFFFF;
     }
 }
 

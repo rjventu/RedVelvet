@@ -35,7 +35,7 @@ if(isset($_POST['send'])){
     
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $subject = $_POST['subject'];
+    $subject = "INQ: " . $_POST['subject'];
     $message = $_POST['message'];
     
     $messageNew = "Sender name: " . $name . "<br/>Sender email address: " . $email . "<br/><br/>" . $message;
