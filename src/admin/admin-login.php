@@ -4,7 +4,7 @@
 <html lang="en">
 
 <!-- Head -->
-<?php include("..\main\head-tags.php")?>
+<?php include("../main/head-tags.php")?>
   <title>Red Velvet KH - Admin Login</title>
 </head>
   
@@ -55,7 +55,7 @@
         </div>
         <div class="row">
           <div class="col d-flex justify-content-center">
-            <a class="mt-3" href="..\main\index.php" style="color:gray;">Go back</a>
+            <a class="mt-3" href="../main/home.php" style="color:gray;">Go back</a>
           </div>
         </div>
       </form>
