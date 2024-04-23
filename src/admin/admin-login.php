@@ -55,7 +55,7 @@
         </div>
         <div class="row">
           <div class="col d-flex justify-content-center">
-            <a class="mt-3" href="..\main\index.php" style="color:gray;">Go back</a>
+            <a class="mt-3" href="..\main\home.php" style="color:gray;">Go back</a>
           </div>
         </div>
       </form>

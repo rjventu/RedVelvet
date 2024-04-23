@@ -7,7 +7,7 @@ include("../admin/classes/ProductCon.class.php");
 if($_SERVER['REQUEST_METHOD'] == 'GET')
 {
   if (!isset($_GET["id"])){
-    header('location: index.php');
+    header('location: home.php');
     exit();
   }
   

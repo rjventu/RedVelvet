@@ -66,7 +66,7 @@ if(isset($_POST['send'])){
       "
       <script>
       alert('Message sent!');
-      document.location.href = 'src/main/index.php';
+      document.location.href = 'src/main/home.php';
       </script>
       ";
     }

@@ -2,7 +2,7 @@
 
 <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="home.php">
             <img src="../../assets/logo.png" width="250" height="50" alt="">
           </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item ml-auto">
-              <a class="nav-link" id="<?= $page == 'index.php' ? 'active':''; ?>" href="index.php">HOME</a>
+              <a class="nav-link" id="<?= $page == 'home.php' ? 'active':''; ?>" href="home.php">HOME</a>
             </li>
             <li class="nav-item ml-auto">
               <a class="nav-link" id="<?= $page == 'about.php' ? 'active':''; ?>" href="about.php">ABOUT US</a>

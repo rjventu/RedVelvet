@@ -29,7 +29,7 @@
     </div>
     <div class="row mt-5">
       <div class="col d-flex justify-content-center">
-        <a class="btn" href="index.php">Back to Home</a>
+        <a class="btn" href="home.php">Back to Home</a>
       </div>
     </div>
   </div>
