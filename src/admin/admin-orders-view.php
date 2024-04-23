@@ -4,7 +4,7 @@
 <html lang="en">
 
 <!-- Head -->
-<?php include("..\main\head-tags.php")?>
+<?php include("../main/head-tags.php")?>
   <title>Red Velvet KH - View Order</title>
 </head>
   

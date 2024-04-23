@@ -219,7 +219,7 @@
           <tr>
               <td>12 BT St. 12351</td>
               <td>8 AM - 7 PM</td>
-              <td><a href="src\admin\admin-login.php">Admin Login</a></td>
+              <td><a href="src/admin/admin-login.php">Admin Login</a></td>
           </tr>
       </table>
   </div>
