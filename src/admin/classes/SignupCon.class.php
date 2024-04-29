@@ -47,7 +47,7 @@ class SignupController extends Signup{
   }
 
   private function invalidName(){
-    if(preg_match("/^[a-zA-Z]$/",$this->fname) || preg_match("/^[a-zA-Z]$/",$this->lname)){
+    if(!preg_match("/^[a-zA-Z]$/",$this->fname) || !preg_match("/^[a-zA-Z]$/",$this->lname)){
       return true;
     }else{
       return false;
