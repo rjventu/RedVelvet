@@ -15,7 +15,7 @@
 9. Type *localhost/RedVelvet/* into the browser.
 10. The website should load and function correctly.
 
-**Alternatively, you can go to the [RedVelvetKH website](redvelvetbakery.x10.mx/).**
+**Alternatively, you can go to the [RedVelvetKH website](https://redvelvetbakery.x10.mx/).**
 
 ## Pre-loaded User Credentials
 
